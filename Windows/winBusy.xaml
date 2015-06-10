@@ -1,0 +1,8 @@
+﻿<Window x:Class="winBusy"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Busy" Height="200" Width="350" ShowActivated="False" WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Content="Busy, please wait..." FontSize="{Binding GiantFontSize,FallbackValue=22.0}"/>
+    </Grid>
+</Window>

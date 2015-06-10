@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TKSIJOBS" Class="linqTKSIDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.10.8;Initial Catalog=TKSIJOBS;Persist Security Info=True;User ID=tksidatauser" SettingsObjectName="TKSISchedule.MySettings" SettingsPropertyName="TKSIJOBSConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tPOHeader" Member="tPOHeaders">
+    <Type Name="tPOHeader">
+      <Column Name="nID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nJobID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dCreateRecord" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="nVendorID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sPONum" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sShipTo1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sShipTo2" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sShipto3" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sShipToCity" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sShipToState" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sShipToZip" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sShiptoCounty" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nBoxes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dPODate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="sTerms" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="dRequired" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="sEnteredBy" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="sVia" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sFOB" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nRetailSale" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" UpdateCheck="WhenChanged" />
+      <Column Name="nSaleAccount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nRetailFreight" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="sConf" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nAdd" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DREC" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DDEL" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="SRECNOTES" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="SDELNOTES" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="DFAXED" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="nAccount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nInvNo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nCheckNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dSimply" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="bSimply" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="nTruck" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sFilter" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sBackOrder" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sItems" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sItemDesc" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sPOType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nsalesadjust" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="sAdjustReason" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="sCurActNote" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="nPOSort" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tPOHeader_tPOLine" Member="tPOLines" ThisKey="nID" OtherKey="nPOID" Type="tPOLine" />
+      <Association Name="tVendor_tPOHeader" Member="tVendor" ThisKey="nVendorID" OtherKey="lid" Type="tVendor" IsForeignKey="true" />
+      <Association Name="tJob_tPOHeader" Member="tJob" ThisKey="nJobID" OtherKey="nID" Type="tJob" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tPOLine" Member="tPOLines">
+    <Type Name="tPOLine">
+      <Column Name="nPOID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nLineNumber" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="sType" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="sDesc" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="nCost" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="nAccountID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sReceived" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="tPOHeader_tPOLine" Member="tPOHeader" ThisKey="nPOID" OtherKey="nID" Type="tPOHeader" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tSOHeader" Member="tSOHeaders">
+    <Type Name="tSOHeader">
+      <Column Name="nID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sSONum" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nCustID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nJobID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sFOB" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="dShipped" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="sVIA" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sShipTo1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sShipTo2" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sShipToCity" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sShipToState" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sShipToZip" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sShipToCounty" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sTerms" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nTaxRate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dinvoice" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="dsimply" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="dmailed" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="nTotal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sOurOrder" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sYourOrder" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nSimplySequence" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tSOHeader_tSOLine" Member="tSOLines" ThisKey="nID" OtherKey="nSOID" Type="tSOLine" />
+      <Association Name="tCustomr_tSOHeader" Member="tCustomr" ThisKey="nCustID" OtherKey="lID" Type="tCustomr" IsForeignKey="true" />
+      <Association Name="tJob_tSOHeader" Member="tJob" ThisKey="nJobID" OtherKey="nID" Type="tJob" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tSOLine" Member="tSOLines">
+    <Type Name="tSOLine">
+      <Column Name="nSOID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nLineNumber" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="sDesc" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="bTaxable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="sType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sHidden" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="nAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="nAccountID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tSOHeader_tSOLine" Member="tSOHeader" ThisKey="nSOID" OtherKey="nID" Type="tSOHeader" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tAddress" Member="tAddresses">
+    <Type Name="tAddress">
+      <Column Name="nID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="sAddress1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sAddress2" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sCity" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sState" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sCounty" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sZip" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sLocCode" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tAddress_tblSWOPending" Member="tblSWOPendings" ThisKey="nID" OtherKey="AddressID" Type="tblSWOPending" />
+      <Association Name="tAddress_tJob" Member="tJobs" ThisKey="nID" OtherKey="nAddressID" Type="tJob" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tVendor" Member="tVendors">
+    <Type Name="tVendor">
+      <Column Name="lid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="sName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sStreet1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sStreet2" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sCity" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sProvState" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sCountry" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sPostalZip" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sPhone1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sPhone2" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sFax" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IgnoreScheduling" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="vendorType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="tVendor_tPOHeader" Member="tPOHeaders" ThisKey="lid" OtherKey="nVendorID" Type="tPOHeader" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tCustomr" Member="tCustomrs">
+    <Type Name="tCustomr">
+      <Column Name="lID" AutoSync="Never" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sStreet1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sStreet2" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sCity" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sProvState" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sCountry" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sPostalZip" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sPhone1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sPhone2" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sFax" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="dCrLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dAmtYTD" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tCustomr_tSOHeader" Member="tSOHeaders" ThisKey="lID" OtherKey="nCustID" Type="tSOHeader" />
+      <Association Name="tCustomr_tblSWOPending" Member="tblSWOPendings" ThisKey="lID" OtherKey="CustID" Type="tblSWOPending" />
+      <Association Name="tCustomr_tJob" Member="tJobs" ThisKey="lID" OtherKey="nCustID" Type="tJob" />
+      <Association Name="tCustomr_tblCustomerExtended" Member="tblCustomerExtendeds" ThisKey="lID" OtherKey="lID" Type="tblCustomerExtended" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tUser" Member="tUsers">
+    <Type Name="tUser">
+      <Column Name="Username" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Userlevel" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblCommissionStructure" Member="tblCommissionStructures">
+    <Type Name="tblCommissionStructure">
+      <Column Name="lngID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="dblLevel1" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblRate1" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblLevel2" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblRate2" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblLevel3" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblRate3" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblLevel4" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblRate4" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblLevel5" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblRate5" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblLevel6" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblRate6" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblLevel7" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblRate7" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblLevel8" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblRate8" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblLevel9" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblRate9" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblLevel10" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblRate10" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblLevel11" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblRate11" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblLevel12" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblRate12" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblLevel13" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblRate13" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblLevel14" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblRate14" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblLevel15" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblRate15" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblLevel16" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblRate16" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblLevel17" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblRate17" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblLevel18" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblRate18" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblLevel19" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblRate19" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblLevel20" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dblRate20" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="lngPriority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dblJobCostRate" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ExpireDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tEmployee" Member="tEmployees">
+    <Type Name="tEmployee">
+      <Column Name="sName" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CityStateZip" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SS" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Claims" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Insurance" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nickname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sequence" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="archive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblCWPackage" Member="tblCWPackages">
+    <Type Name="tblCWPackage">
+      <Column Name="cwref" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="shopno" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="pkgno" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="serialno" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="shipdata" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="dlrpo" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="fbo" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="shipvia" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="width" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="height" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="depth" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="dateImported" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="dateReceived" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dateDelivered" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="other" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tblCWPackage_tblCWPackageContent" Member="tblCWPackageContents" ThisKey="serialno" OtherKey="pkgserial" Type="tblCWPackageContent" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblCWPackageContents" Member="tblCWPackageContents">
+    <Type Name="tblCWPackageContent">
+      <Column Name="gid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="pkgserial" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="cabno" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="serialno" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="fdesc" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="qty" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="width" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="height" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="depth" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="material" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="dateImported" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="tblCWPackage_tblCWPackageContent" Member="tblCWPackage" ThisKey="pkgserial" OtherKey="serialno" Type="tblCWPackage" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblJobActivity" Member="tblJobActivities">
+    <Type Name="tblJobActivity">
+      <Column Name="gID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nJobID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="dateEntered" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ActivityType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ActivityDetail" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Other" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblJobTax" Member="tblJobTaxes">
+    <Type Name="tblJobTax">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nJobID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TaxName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TaxPercent" Type="System.Decimal" DbType="Decimal(14,4) NOT NULL" CanBeNull="false" />
+      <Column Name="TaxCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tJob_tblJobTax" Member="tJob" ThisKey="nJobID" OtherKey="nID" Type="tJob" IsForeignKey="true" />
+      <Association Name="tblTaxDistrict_tblJobTax" Member="tblTaxDistrict" ThisKey="TaxName" OtherKey="RateName" Type="tblTaxDistrict" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tUserPrefrences" Member="tUserPrefrences">
+    <Type Name="tUserPrefrence">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AttributeName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tPayments" Member="tPayments">
+    <Type Name="tPayment">
+      <Column Name="nID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="JOBID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="nAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="salesnickname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tJob_tPayment" Member="tJob" ThisKey="JOBID" OtherKey="nID" Type="tJob" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblTrailerHeader" Member="tblTrailerHeaders">
+    <Type Name="tblTrailerHeader">
+      <Column Name="PalletNum" Type="System.String" DbType="VarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PO" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ShipDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TrailerControl" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="FreightTermsCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="FreightCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ShipType" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="TrailerNumber" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblTrailerDetail" Member="tblTrailerDetails">
+    <Type Name="tblTrailerDetail">
+      <Column Name="ShipNum" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="OrderLineNumber" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ShippedQuantity" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="LoadedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LabelID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DateScannedTKSI" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeliveredTKSI" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DamageNotes" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="DetailDescription" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Other" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SupplierSO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="po" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblTasklist" Member="tblTasklists">
+    <Type Name="tblTasklist">
+      <Column Name="gid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="dateentered" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="datemodified" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="users" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="metatags" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSWOPending" Member="tblSWOPendings">
+    <Type Name="tblSWOPending">
+      <Column Name="gid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddressID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="JOBID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CustID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateOfOrder" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Sales" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EstimatedHours" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="MaterialCharge" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="TaxCharge" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="LaborCharge" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="TripCharge" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="sPOType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PONum" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="dateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="detail1" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="detail2" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="detail3" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="detail4" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="detail5" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="detail6" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentTerms" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="dateOrderBy" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="sStatus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="detail7" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="detail8" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="detail9" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="detail10" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="detail11" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="detail12" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="NewCustomerInfo" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="JobContact" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tblSWOPending_tblSWOOrder" Member="tblSWOOrders" ThisKey="gid" OtherKey="gSWOID" Type="tblSWOOrder" />
+      <Association Name="tJob_tblSWOPending" Member="tJob" ThisKey="JOBID" OtherKey="nID" Type="tJob" IsForeignKey="true" />
+      <Association Name="tAddress_tblSWOPending" Member="tAddress" ThisKey="AddressID" OtherKey="nID" Type="tAddress" IsForeignKey="true" />
+      <Association Name="tCustomr_tblSWOPending" Member="tCustomr" ThisKey="CustID" OtherKey="lID" Type="tCustomr" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSWOOrder" Member="tblSWOOrders">
+    <Type Name="tblSWOOrder">
+      <Column Name="gid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="gSWOID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="nVendorID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sSalesName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="OrderDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ShipWeekOf" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ShipVia" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SalesTax" Type="System.Decimal" DbType="Decimal(18,4) NOT NULL" CanBeNull="false" />
+      <Column Name="Terms" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LayoutSheets" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="BillTo" Type="System.String" DbType="VarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="ShipTo" Type="System.String" DbType="VarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="RetailFactor" Type="System.Decimal" DbType="Decimal(18,4) NOT NULL" CanBeNull="false" />
+      <Column Name="CostFactor" Type="System.Decimal" DbType="Decimal(18,4) NOT NULL" CanBeNull="false" />
+      <Column Name="RetailShipping" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CostShipping" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="retailADD" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DoorStyleWall" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DoorNo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DoorMod" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Edge" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="wood" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FinishColor" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Laminate" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DoorStyleBase" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DoorNo2" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CabinetMod" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Hinge" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FinishMod" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MapleMelIntDoveDwr" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="WoodDoveDwr" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="WhiteMelInt" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MapleMelInt" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SDANum" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CustID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NewCustomerInfo" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="JobContact" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CompletionDate" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PONum" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Upcharge1" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Upcharge2" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Upcharge3" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Upcharge1Label" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Upcharge2Label" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Upcharge3Label" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tblSWOPending_tblSWOOrder" Member="tblSWOPending" ThisKey="gSWOID" OtherKey="gid" Type="tblSWOPending" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tJob" Member="tJobs">
+    <Type Name="tJob">
+      <Column Name="nID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nAddressID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sJobDesc" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="dCreated" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="dJobCreated" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="sJobNo" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="nCustID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sPhone" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="sJobContact" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="sCounty" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="nTotalWholesale" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="sBuildingPermit" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="sTerms" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="dDrawing" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="nMaterialsCharge" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="nTaxRate" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="nLaborCharge" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="sContractSigned" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="sDisclaimerSigned" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sDrawingsSigned" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="sComplete" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="sSalesperson" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sOtherNotes" Type="System.String" DbType="VarChar(3000) NOT NULL" CanBeNull="false" />
+      <Column Name="dCommPaid" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="sCommLocked" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="dCrLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dAmtYTD" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="sInvNotes" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="lngCommissionStruct" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="blnSplitCommission" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="sSalesperson2" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sEmail" Type="System.String" DbType="VarChar(90) NOT NULL" CanBeNull="false" />
+      <Association Name="tJob_tPOHeader" Member="tPOHeaders" ThisKey="nID" OtherKey="nJobID" Type="tPOHeader" />
+      <Association Name="tJob_tSOHeader" Member="tSOHeaders" ThisKey="nID" OtherKey="nJobID" Type="tSOHeader" />
+      <Association Name="tJob_tPayment" Member="tPayments" ThisKey="nID" OtherKey="JOBID" Type="tPayment" />
+      <Association Name="tJob_tblSWOPending" Member="tblSWOPendings" ThisKey="nID" OtherKey="JOBID" Type="tblSWOPending" />
+      <Association Name="tJob_tblJobTax" Member="tblJobTaxes" ThisKey="nID" OtherKey="nJobID" Type="tblJobTax" />
+      <Association Name="tAddress_tJob" Member="tAddress" ThisKey="nAddressID" OtherKey="nID" Type="tAddress" IsForeignKey="true" />
+      <Association Name="tCustomr_tJob" Member="tCustomr" ThisKey="nCustID" OtherKey="lID" Type="tCustomr" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblCustomerExtended" Member="tblCustomerExtendeds">
+    <Type Name="tblCustomerExtended">
+      <Column Name="lID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="InvoiceNotes" Type="System.String" DbType="VarChar(3000) NOT NULL" CanBeNull="false" />
+      <Association Name="tCustomr_tblCustomerExtended" Member="tCustomr" ThisKey="lID" OtherKey="lID" Type="tCustomr" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblLocationLabelJOIN" Member="tblLocationLabelJOINs">
+    <Type Name="tblLocationLabelJOIN">
+      <Column Name="LocationNumber" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TrailerlLabelID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PO" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tblLocationBin_tblLocationLabelJOIN" Member="tblLocationBin" ThisKey="LocationNumber" OtherKey="LocationNumber" Type="tblLocationBin" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblLocationBins" Member="tblLocationBins">
+    <Type Name="tblLocationBin">
+      <Column Name="LocationNumber" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LocationPrefix" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="LabelID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DateModified" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Association Name="tblLocationBin_tblLocationLabelJOIN" Member="tblLocationLabelJOINs" ThisKey="LocationNumber" OtherKey="LocationNumber" Type="tblLocationLabelJOIN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblTaxDistrict" Member="tblTaxDistricts">
+    <Type Name="tblTaxDistrict">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TaxRate" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="RateName" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="AccountingCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Association Name="tblTaxDistrict_tblJobTax" Member="tblJobTaxes" ThisKey="RateName" OtherKey="TaxName" Type="tblJobTax" />
+    </Type>
+  </Table>
+</Database>

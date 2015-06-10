@@ -1,0 +1,60 @@
+﻿<Window x:Class="CommPayment"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Commissions Payment Amout" Width="474" Height="270" >
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="b2v" />
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Background="LightYellow" Orientation="Horizontal" Grid.RowSpan="2"/>
+        <Label Grid.Row="0" Content="Amount" Margin="140,10,0,0"/>
+        <Label Grid.Row="0" Content="Main Payment" Margin="20,10,0,0"/>
+        <Label Grid.Row="0" Content="Salesperson" Margin="280,10,0,0"/>
+        <Label Grid.Row="0" Foreground="Red" FontWeight="Bold" Content="Must be split commission." Name="lblMustBeSplitCommissionFLAG" Visibility="Collapsed" Margin="20,32,0,0"/>
+        <TextBox Name="txtAmount1" Grid.Row="1" HorizontalAlignment="Left" Height="23" Margin="140,10,0,10" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox Name="cmbSales1" Grid.Row="1" HorizontalAlignment="Left" Margin="280,10,0,0" VerticalAlignment="Top" Width="120"  ItemsSource="{Binding}"/>
+
+        <StackPanel x:Name="spSplit" Grid.Row="2" Background="LightGreen" Orientation="Horizontal" Grid.RowSpan="2" >
+            <StackPanel.Style>
+                <Style x:Name="myTest2" TargetType="StackPanel" >
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding IsChecked, ElementName=chkSplitPayment}" Value="True">
+                            <DataTrigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                   
+                                            <!--<DoubleAnimation Storyboard.TargetName="spSplit" Storyboard.TargetProperty="FontSize" From="10" To="12" Duration="00:00:00.0000000"/>-->
+                                        <DoubleAnimation Storyboard.TargetProperty="Height" From="40" To="80" Duration="00:00:00.5000000"/>
+                                            <!--<DoubleAnimation Storyboard.TargetName="tbReason" Storyboard.TargetProperty="FontSize" From="10" To="12" Duration="00:00:00.0000000"/>
+                                            <DoubleAnimation Storyboard.TargetName="tbReason" Storyboard.TargetProperty="Height" From="22" To="64" Duration="00:00:00.0000000"/>-->
+                               
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </DataTrigger.EnterActions>
+                
+                        
+                            <!--<Setter Property="Height"  Value="100" ></Setter>-->
+                    </DataTrigger>
+                        <DataTrigger Binding="{Binding IsChecked, ElementName=chkSplitPayment}" Value="False">
+                            <Setter Property="Height"  Value="40" ></Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+            </Style>
+            </StackPanel.Style>
+            
+        </StackPanel>
+        <CheckBox x:Name="chkSplitPayment" IsChecked="False" Grid.Row="2" Margin="20,10,0,10" Content="Split payment"/>
+        <ComboBox Name="cmbSales2" Grid.Row="2" HorizontalAlignment="Left" Margin="280,10,0,0" VerticalAlignment="Top" Width="120"  ItemsSource="{Binding}" Visibility="{Binding IsChecked,ElementName=chkSplitPayment,Converter={StaticResource b2v}}"/>
+        <TextBox Name="txtAmount2" Grid.Row="2" HorizontalAlignment="Left" Height="23" Margin="140,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Visibility="{Binding IsChecked,ElementName=chkSplitPayment,Converter={StaticResource b2v}}"/>
+        <!--<ComboBox Name="cmbSales3" Grid.Row="3" HorizontalAlignment="Left" Margin="280,10,0,0" VerticalAlignment="Top" Width="120"  ItemsSource="{Binding}" Visibility="{Binding IsChecked,ElementName=chkSplitPayment,Converter={StaticResource b2v}}"/>
+        <TextBox Name="txtAmount3" Grid.Row="3" HorizontalAlignment="Left" Height="23" Margin="140,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Visibility="{Binding IsChecked,ElementName=chkSplitPayment,Converter={StaticResource b2v}}"/>-->
+        <Button Grid.Row="4" Width="160" Height="26" Content="Finished" IsDefault="True" Click="Button_Click_1" Margin="0,10"/>
+    </Grid>
+</Window>

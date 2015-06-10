@@ -1,0 +1,21 @@
+﻿<Window x:Class="winJob" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="JOB" SizeToContent="WidthAndHeight" DataContext="{Binding}" 
+      xmlns:local="clr-namespace:TKSISchedule"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+      xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras.WPF4"
+      xmlns:sys="clr-namespace:System;assembly=mscorlib" 
+      Background="#FFA8BEE6" >
+   
+    <Viewbox Stretch="Uniform" >
+          <Grid MinWidth="650" >        
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*" MinWidth="140" Name="col1"/>
+                <ColumnDefinition Width="70*" MinWidth="500" Name="col2"/>
+            </Grid.ColumnDefinitions>
+            <local:ucJobIndex Grid.Column="0"/>
+            <local:ucJobDetail Grid.Column="1"/>
+
+        </Grid>
+    </Viewbox>
+</Window>

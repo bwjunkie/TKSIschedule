@@ -1,0 +1,121 @@
+﻿<Application x:Class="Application"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:local="clr-namespace:TKSISchedule" 
+    StartupUri="Windows/Login.xaml">
+    
+    <Application.Resources>
+        <SolidColorBrush Color="#FFFFC0" x:Key="myyellow"/>
+        <SolidColorBrush Color="#C0C0FF" x:Key="myblue"/>
+        <Path x:Key="peoplepath" Stretch="Uniform" Fill="Black" Data="F1 M 80.1094,27.9824C 84.4167,27.9824 87.9089,31.4733 87.9115,35.7825L 87.9115,72.3684C 87.9115,76.6784 84.4167,80.1718 80.1094,80.1718L 80.0665,80.1718L 80.0665,106.087C 80.0665,110.396 76.6694,113.889 72.4818,113.889L 60.8535,113.889C 56.6628,113.889 53.2683,110.394 53.2683,106.087L 53.2683,80.1718L 53.224,80.1718C 48.9161,80.1718 45.4226,76.677 45.4226,72.3684L 45.4226,35.7825C 45.4226,31.4733 48.9161,27.9824 53.224,27.9824L 80.1094,27.9824 Z M 66.6666,3.05176e-005C 73.6991,3.05176e-005 79.3997,5.70123 79.3997,12.7331C 79.3997,19.7657 73.6991,25.4668 66.6666,25.4668C 59.634,25.4668 53.9335,19.7657 53.9335,12.7331C 53.9335,5.70123 59.634,3.05176e-005 66.6666,3.05176e-005 Z M 126.648,31.0241C 130.341,31.0241 133.333,34.0176 133.333,37.7083L 133.333,69.0599C 133.333,72.7539 130.341,75.7487 126.646,75.7487L 126.611,75.7487L 126.611,97.9544C 126.611,101.647 123.7,104.639 120.112,104.639L 110.146,104.639C 106.557,104.639 103.648,101.647 103.648,97.9544L 103.648,75.7487L 103.611,75.7487C 99.9166,75.7487 96.9245,72.7566 96.9245,69.0612L 96.9245,37.7096C 96.9245,34.0176 99.9166,31.0241 103.611,31.0241L 126.648,31.0241 Z M 115.13,7.04678C 121.156,7.04678 126.042,11.9323 126.042,17.9583C 126.042,23.985 121.156,28.8704 115.13,28.8704C 109.103,28.8704 104.217,23.985 104.217,17.9583C 104.217,11.9323 109.103,7.04678 115.13,7.04678 Z M 29.7226,31.0241C 33.4134,31.0241 36.4069,34.0176 36.4083,37.7083L 36.4083,69.0598C 36.4083,72.7538 33.4147,75.7486 29.7226,75.7486L 29.6856,75.7486L 29.6856,97.953C 29.6856,101.647 26.776,104.639 23.1868,104.639L 13.2213,104.639C 9.6348,104.639 6.72267,101.647 6.72267,97.953L 6.72267,75.7486L 6.68561,75.7486C 2.99347,75.7486 0,72.7538 0,69.0598L 0,37.7083C 0,34.0176 2.99347,31.0241 6.68561,31.0241L 29.7226,31.0241 Z M 18.2038,7.0481C 24.2299,7.0481 29.1145,11.9329 29.1145,17.9583C 29.1145,23.9844 24.2299,28.869 18.2038,28.869C 12.1784,28.869 7.29361,23.9844 7.29361,17.9583C 7.29361,11.9329 12.1784,7.0481 18.2038,7.0481 Z "/>
+
+        <DataTemplate  x:Key="jobtemplate">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="JOB: "/>
+                 <TextBlock  Grid.Column="0" Margin="4,0"  Text="{Binding sJobNo}" TextDecorations="Underline" Foreground="Blue" />
+            </StackPanel>
+                                    
+        </DataTemplate>
+
+        <DataTemplate x:Key="potemplate">
+           
+           <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition MinWidth="20"></ColumnDefinition>
+                    <ColumnDefinition MinWidth="70"></ColumnDefinition>
+                    <ColumnDefinition  ></ColumnDefinition>
+                    <ColumnDefinition  ></ColumnDefinition>
+                    <ColumnDefinition  ></ColumnDefinition>
+                    <ColumnDefinition  ></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                    
+                <TextBlock  Grid.Column="0" Margin="3,0"  Text="" />
+                <TextBlock  Grid.Column="1"   Text="{Binding sPONum}" />
+                <TextBlock  MinWidth="15" Grid.Column="2" Text="{Binding received}" />
+                <TextBlock  MinWidth="15" Grid.Column="3" Text="{Binding delivered}" />
+                <TextBlock  MinWidth="15" Grid.Column="4" Text="{Binding tosage}" />
+                <TextBlock  Grid.Column="5" Text="{Binding warehousebin}" />
+           </Grid>
+                       
+        </DataTemplate>
+        
+        <!--Control colors.-->
+        <Color x:Key="WindowColor">#FFE8EDF9</Color>
+        <Color x:Key="ContentAreaColorLight">#FFC5CBF9</Color>
+        <Color x:Key="ContentAreaColorDark">#FF7381F9</Color>
+
+        <Color x:Key="DisabledControlLightColor">#FFE8EDF9</Color>
+        <Color x:Key="DisabledControlDarkColor">#FFC5CBF9</Color>
+        <Color x:Key="DisabledForegroundColor">#FF888888</Color>
+
+        <Color x:Key="SelectedBackgroundColor">#FFC5CBF9</Color>
+        <Color x:Key="SelectedUnfocusedColor">#FFDDDDDD</Color>
+
+        <Color x:Key="ControlLightColor">White</Color>
+        <Color x:Key="ControlMediumColor">#FF7381F9</Color>
+        <Color x:Key="ControlDarkColor">#FF211AA9</Color>
+
+        <Color x:Key="ControlMouseOverColor">#FF3843C4</Color>
+        <Color x:Key="ControlPressedColor">#FF211AA9</Color>
+
+
+        <Color x:Key="GlyphColor">#FF444444</Color>
+        <Color x:Key="GlyphMouseOver">sc#1, 0.004391443, 0.002428215, 0.242281124</Color>
+
+        <!--Border colors-->
+        <Color x:Key="BorderLightColor">#FFCCCCCC</Color>
+        <Color x:Key="BorderMediumColor">#FF888888</Color>
+        <Color x:Key="BorderDarkColor">#FF444444</Color>
+
+        <Color x:Key="PressedBorderLightColor">#FF888888</Color>
+        <Color x:Key="PressedBorderDarkColor">#FF444444</Color>
+
+        <Color x:Key="DisabledBorderLightColor">#FFAAAAAA</Color>
+        <Color x:Key="DisabledBorderDarkColor">#FF888888</Color>
+
+        <Color x:Key="DefaultBorderBrushDarkColor">Black</Color>
+
+        <!--Control-specific resources.-->
+        <Color x:Key="HeaderTopColor">#FFC5CBF9</Color>
+        <Color x:Key="DatagridCurrentCellBorderColor">Black</Color>
+        <Color x:Key="SliderTrackDarkColor">#FFC5CBF9</Color>
+
+        <Color x:Key="NavButtonFrameColor">#FF3843C4</Color>
+
+        <LinearGradientBrush x:Key="MenuPopupBrush"
+                     EndPoint="0.5,1"
+                     StartPoint="0.5,0">
+            <GradientStop Color="{DynamicResource ControlLightColor}"
+                Offset="0" />
+            <GradientStop Color="{DynamicResource ControlMediumColor}"
+                Offset="0.5" />
+            <GradientStop Color="{DynamicResource ControlLightColor}"
+                Offset="1" />
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="ProgressBarIndicatorAnimatedFill"
+                     StartPoint="0,0"
+                     EndPoint="1,0">
+            <LinearGradientBrush.GradientStops>
+                <GradientStopCollection>
+                    <GradientStop Color="#000000FF"
+                    Offset="0" />
+                    <GradientStop Color="#600000FF"
+                    Offset="0.4" />
+                    <GradientStop Color="#600000FF"
+                    Offset="0.6" />
+                    <GradientStop Color="#000000FF"
+                    Offset="1" />
+                </GradientStopCollection>
+            </LinearGradientBrush.GradientStops>
+        </LinearGradientBrush>
+        
+        <SolidColorBrush Color="{x:Static SystemColors.HighlightColor}" x:Key="highlight1"/>
+        <Color R="192" G="192" B="255" A="255" x:Key="color1" />
+        <SolidColorBrush Color="{StaticResource color1}"  x:Key="brush2"/>
+        <SolidColorBrush Color="#FFF4FF84"  x:Key="brushFadedYellow"/>
+        <SolidColorBrush Color="#FFB7F9A8"  x:Key="brushFadedGreen"/>
+                  
+    </Application.Resources>
+</Application>

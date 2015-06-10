@@ -1,0 +1,103 @@
+﻿<UserControl x:Class="JobsByCustomerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TKSISchedule" 
+             xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras.WPF4"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+             mc:Ignorable="d" FontSize="13"
+             d:DesignHeight="800" d:DesignWidth="700" DataContext="{Binding}">
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Background" Value="White"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="1"/>
+            <Setter Property="Background" Value="#C0C0FF"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="70*"/>
+          
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="70*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="{Binding cust.sName}" Margin="8,2" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontWeight="Bold"/>
+        
+        <Label Content="Phone 1" Grid.Row="1" Grid.Column="0"/>
+        <TextBlock Text="{Binding cust.sPhone1}" Grid.Row="1" Grid.Column="1"/>
+
+        <Label Content="Phone 2" Grid.Row="2" Grid.Column="0"/>
+        <TextBlock Text="{Binding cust.sPhone2}" Grid.Row="2" Grid.Column="1"/>
+
+        <Label Content="Fax" Grid.Row="3" Grid.Column="0"/>
+        <TextBlock Text="{Binding cust.sFax}" Grid.Row="3" Grid.Column="1"/>
+
+        <Label Content="Address 1" Grid.Row="4" Grid.Column="0"/>
+        <TextBlock Text="{Binding cust.sStreet1}" Grid.Row="4" Grid.Column="1"/>
+
+        <Label Content="Address 2" Grid.Row="5" Grid.Column="0"/>
+        <TextBlock Text="{Binding cust.sStreet2}" Grid.Row="5" Grid.Column="1"/>
+
+        <Label Content="City, State Zip" Grid.Row="6" Grid.Column="0"/>
+        <TextBlock Grid.Row="6" Grid.Column="1" >          
+          <Run Text="{Binding cust.sCity}"/>
+          <Run Text=", "/>
+          <Run Text="{Binding cust.sProvState}"/>     
+          <Run Text=" "/>
+          <Run Text="{Binding cust.sPostalZip}"/>
+        </TextBlock>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="8" Grid.Column="0" Background="#C0C0FF">
+            <Label Content="Invoice Notes" Width="130" />
+            <Button Content="Save" Command="{Binding cmdsaveinvoicenotes,UpdateSourceTrigger=PropertyChanged}" Width="70"  Margin="2,8"/>
+        </StackPanel>
+
+        <TextBox Text="{Binding cust.tblCustomerExtendeds.InvoiceNotes}" Grid.Row="8" Grid.Column="1" Grid.RowSpan="2"/>
+
+        <TextBlock FontWeight="Bold" Text="Jobs for this customer:" Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Bottom" />
+       
+        <ListView HorizontalContentAlignment="Stretch" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="11" MinHeight="200" Name="lbJobSearch" SelectedItem="{Binding selectedjob}" ItemsSource="{Binding listjobsextra}"  VerticalAlignment="Stretch" Margin="8" >
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Background="Transparent"  HorizontalAlignment="Stretch" MinWidth="400" >
+                        <!-- background must be transparent to get the clicks to work -->
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger  EventName="MouseLeftButtonDown">
+                                <cmd:EventToCommand Command="{Binding Path=cmdjob, Mode=OneWay}" PassEventArgsToCommand="True" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        <Label Width="10" Background="Transparent"/>
+                        <Label MinWidth="60" Background="{Binding field1, Converter={local:ValueToBrushConverter}}" Content="{Binding field1}"/>
+
+                        <Label x:Name="tb2"  Background="{Binding field1,Converter={local:ValueToBrushConverter}}"  Content="{Binding field2}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+            <ListView.Resources>
+                <Style TargetType="{x:Type GridViewColumnHeader}">
+                    <Setter Property="Visibility" Value="Collapsed" />
+                </Style>
+            </ListView.Resources>
+        </ListView>
+    </Grid>
+</UserControl>

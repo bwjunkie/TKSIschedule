@@ -1,0 +1,234 @@
+﻿<Window x:Class="winCommissions"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" xmlns:local="clr-namespace:TKSISchedule"  SizeToContent="WidthAndHeight" Top="5" >
+   
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="BorderBrush" Value="#FFF0F0F0"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Background" Value="#FFEEEEEE"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="Padding" Value="4"/>
+        </Style>
+   
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Padding" Value="2"/>
+        </Style>
+        <Style TargetType="ListBox">
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="FontSize" Value="11"/>
+        </Style>
+
+        <local:paymentdates x:Key="listDates" />
+        <local:salesperson x:Key="listSales" />
+        <!--<local:ocCommissions x:Key="listComm"/>-->
+
+        <DataTemplate  DataType="{x:Type local:salesperson}" x:Key="dtsalesperson">
+            <TextBlock Text="{Binding Path=nickname}"></TextBlock>
+        </DataTemplate>
+
+        <DataTemplate  x:Key="dtjobsnotshown">
+            <Button FontSize="10" Background="#EEEEEE" Margin="-1" Padding="0" Content="{Binding Path=sJobNo}" MinWidth="100"  MouseDoubleClick="JobNameButton_Click_1"  />
+        </DataTemplate>
+
+      
+    </Window.Resources>
+    <Viewbox>
+        <Grid  VerticalAlignment="Top" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="175*"/>
+                <ColumnDefinition Width="800"/>
+                <ColumnDefinition Width="140*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="300"/>
+                <RowDefinition Height="220"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+                <Label x:Name="lblCommissionsTitle" FontWeight="Bold" Content="Commissions:" HorizontalAlignment="Stretch"   />
+                <Label x:Name="lblSalesperson"  FontWeight="Bold"  Content="Salesperson not selected" HorizontalAlignment="Stretch" />
+            </StackPanel>
+
+            <ListBox ItemTemplate="{StaticResource dtsalesperson}"  Grid.Row="1" Grid.Column="0" ItemsSource="{StaticResource listSales}" x:Name="lbSalesperson" HorizontalAlignment="Stretch"/>
+            <ListBox IsSynchronizedWithCurrentItem="True" Grid.Row="2" Grid.Column="0" ItemsSource="{StaticResource listDates}" x:Name="lbPayDates" HorizontalAlignment="Stretch"/>
+
+            <Border Name="gridcomm" VerticalAlignment="Top" DataContext="{Binding}" Grid.Row="0" Grid.Column="1" Grid.RowSpan="4">
+                <ListBox IsSynchronizedWithCurrentItem="True" x:Name="lbComm" Grid.Row="0" Grid.Column="1" Grid.RowSpan="4"  ItemsSource="{Binding commlist}" SelectedItem="{Binding selectedcomm}">
+                    <ListBox.ItemTemplate>
+
+                        <DataTemplate DataType="{x:Type local:ocCommissions}" >
+                            <Border CornerRadius="4" BorderBrush="Gray" BorderThickness="0" >
+                                <Grid Margin="2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80" />
+                                        <ColumnDefinition Width="80" />
+                                        <ColumnDefinition Width="80" />
+                                        <ColumnDefinition Width="80" />
+                                        <ColumnDefinition Width="80" />
+                                        <ColumnDefinition Width="80" />
+                                        <ColumnDefinition Width="50" />
+                                        <ColumnDefinition Width="110" />
+                                        <ColumnDefinition Width="110" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <Grid.Resources>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="Margin" Value="2,0"/>
+                                            <Setter Property="FontSize" Value="11"/>
+                                        </Style>
+                                    </Grid.Resources>
+                                    <Button  Content="{Binding Path=JobDetails}" HorizontalContentAlignment="Left" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="9" MouseDoubleClick="JobNameButton_Click_1" >
+                                        <Button.Background>
+                                            <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                                                <GradientStop Color="#FFEEEEEE"/>
+                                                <GradientStop Color="White" Offset="1"/>
+                                            </LinearGradientBrush>
+                                        </Button.Background>
+                                    </Button>
+
+                                    <TextBlock Text="CustPayment"  Grid.Column="0" Grid.Row="2"  />
+                                    <TextBlock Text="Date:"  Grid.Column="0" Grid.Row="3" />
+                                    <TextBlock Text="Contract$"  Grid.Column="0" Grid.Row="4" />
+                                    <TextBlock Text="{Binding Path=CustPayment}"  Grid.Column="1" Grid.Row="2" Background="{Binding Path=colorPaymentFull}" TextAlignment="Right"/>
+                                    <TextBlock Text="{Binding Path=dDate}"  Grid.Column="1" Grid.Row="3" />
+                                    <TextBlock Text="{Binding Path=Contract}"  Grid.Column="1" Grid.Row="4" TextAlignment="Right"/>
+                                    <TextBlock Text="Cabinetry:"  Grid.Column="2" Grid.Row="1" />
+                                    <TextBlock Text="Hardware:"  Grid.Column="2" Grid.Row="2" />
+                                    <TextBlock Text="Install:"  Grid.Column="2" Grid.Row="3" />
+                                    <TextBlock Text="Total:"  Grid.Column="2" Grid.Row="4" />
+                                    <TextBlock Text="{Binding Path=Total4010}"  Grid.Column="3" Grid.Row="1" TextAlignment="Right"  />
+                                    <TextBlock Text="{Binding Path=Total4030}"  Grid.Column="3" Grid.Row="2" TextAlignment="Right"  />
+                                    <TextBlock Text="{Binding Path=Total4040}"  Grid.Column="3" Grid.Row="3" TextAlignment="Right"  />
+                                    <TextBlock Text="{Binding Path=TotalSale}"  Grid.Column="3" Grid.Row="4" TextAlignment="Right" FontWeight="Bold"  />
+                                    <TextBlock Text="Cabinetry:"  Grid.Column="4" Grid.Row="1" />
+                                    <TextBlock Text="Hardware:"  Grid.Column="4" Grid.Row="2" />
+                                    <TextBlock Text="Install:"  Grid.Column="4" Grid.Row="3" />
+                                    <TextBlock Text="Total:"  Grid.Column="4" Grid.Row="4" />
+                                    <TextBlock Text="{Binding Path=Total5010}"  Grid.Column="5" Grid.Row="1" TextAlignment="Right"  />
+                                    <TextBlock Text="{Binding Path=Total5030}"  Grid.Column="5" Grid.Row="2" TextAlignment="Right"  />
+                                    <TextBlock Text="{Binding Path=Total5040}"  Grid.Column="5" Grid.Row="3" TextAlignment="Right"  />
+                                    <TextBlock Text="{Binding Path=TotalCost}"  Grid.Column="5" Grid.Row="4" TextAlignment="Right"  FontWeight="Bold" />
+                                    <TextBlock Text="{Binding Path=Factor}"  Grid.Column="6" Grid.Row="1"  TextAlignment="Right"  />
+                                    <TextBlock Text="{Binding Path=JobMarkup}"  Grid.Column="6" Grid.Row="4"  Background="{Binding Path=colorJobMarkup}"  TextAlignment="Right"  FontWeight="Bold" />
+                                    <TextBlock Text="Net-Profit:$"  Grid.Column="7" Grid.Row="1" />
+                                    <TextBlock Text="Comm Rate%"  Grid.Column="7" Grid.Row="2" />
+                                    <TextBlock Text="Comm Total:$"  Grid.Column="7" Grid.Row="3" />
+                                    <Button Click="btnClickTopay" Content="{Binding Path=ClickToPay, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="7" Grid.Row="4" Grid.ColumnSpan="2" FontWeight="Bold" Background="{Binding Path=colorClickToPay}" Foreground="White"/>
+                                    <TextBlock Text="{Binding NetProfit}"  Grid.Column="8" Grid.Row="1" TextAlignment="Right"  />
+                                    <TextBlock Text="{Binding CommRate}"  Grid.Column="8" Grid.Row="2" TextAlignment="Right"  />
+                                    <TextBlock Text="{Binding CommTotal}"  Grid.Column="8" Grid.Row="3" TextAlignment="Right"  />
+                                    <TextBlock Text="Balance Due$"  Grid.Column="7" Grid.Row="5"   />
+                                    <TextBlock Text="{Binding Path=BalanceDue}"  Grid.Column="9" Grid.Row="5" TextAlignment="Right"  />
+
+
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="{x:Type ListBoxItem}">
+
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="ListBoxItem">
+                                        <Border Name="Border" Padding="2" SnapsToDevicePixels="true" BorderThickness="1" BorderBrush="Gray" Background="Transparent" Margin="0">
+                                            <ContentPresenter/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsSelected" Value="true">
+                                                <Setter TargetName="Border" Property="BorderThickness" Value="3"/>
+                                                <Setter TargetName="Border" Property="BorderBrush" Value="Yellow"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+                </ListBox>
+            </Border>
+
+
+            <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" >
+                <Label x:Name="lblJobsNotShown" Content="Jobs Not Shown" />
+                <ListBox IsSynchronizedWithCurrentItem="True" ItemTemplate="{StaticResource dtjobsnotshown}" Height="190"  ItemsSource="{Binding}" x:Name="lbJobsNotShown" HorizontalAlignment="Stretch"/>
+
+            </StackPanel>
+
+
+            <StackPanel Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" Orientation="Vertical">
+                <Label Content="Split Payments"/>
+                <ListBox Height="50" ItemsSource="{Binding listAdditionalSplitPaymentsNotForThisSalesperson}" x:Name="lbSplitPayments">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding strSalesNickname}"/>
+                                <TextBlock Text="{Binding decAmount}"/>
+
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <Label x:Name="lblTotalPaidOrToPayTitle" Content="Total 'Not Yet Paid'" />
+                <TextBlock x:Name="tbTotalNotSelected" />
+                <Label x:Name="lblSelectedTitle" Content="Total 'Marked To Pay'" />
+                <TextBlock  x:Name="tbTotalSelected" />
+
+                <Label x:Name="lblDrawsTitle" Content="Total draws up to date" />
+                <TextBlock x:Name="tbDraws" />
+                <Button x:Name="btnAddDraw" Content="AddDraw" Margin="0,0,0,20" />
+
+                <Button x:Name="btnPrint" Content="Print"/>
+                <Button x:Name="btnPrintALL" Content="Print ALL"/>
+                <Button x:Name="btnPrintSalesPersonRpt" Content="Print Sales Report"/>
+                <Button x:Name="btnPrintSalesPersonRptALL" Content="Print ALL Sales Report"/>
+
+
+                <TextBox Margin="0,20,0,0" FontSize="14" x:Name="txtFind"/>
+                <Button  x:Name="btnFind" Content="Find"/>
+                <TextBlock Text="" Name="tbFindResult" TextWrapping="Wrap" Height="50"/>
+            </StackPanel>
+
+            <StackPanel Height="85" VerticalAlignment="Top" Margin="0,60,0,0" Background="PaleGreen" Orientation="Vertical" Grid.Column="0" Grid.Row="3"  >
+                <Label x:Name="lblPaydate" Content="Pay Date" Background="PaleGreen" />
+                <StackPanel Orientation="Horizontal">
+
+                </StackPanel>
+                <DatePicker x:Name="datePayDate"  />
+                <Button x:Name="btnUpdate" Content="Update/Save" Margin="0,2,0,10" />
+
+            </StackPanel>
+            <StackPanel VerticalAlignment="Top"  Orientation="Vertical" Grid.Column="0" Grid.Row="3" >
+
+                <Button x:Name="btnRefresh" Content="Refresh" Background="LightBlue" Margin="0,10"/>
+            </StackPanel>
+
+        </Grid>
+    </Viewbox>
+  
+</Window>
+

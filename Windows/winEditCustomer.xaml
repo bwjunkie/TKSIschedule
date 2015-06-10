@@ -1,0 +1,13 @@
+﻿
+    <Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:TKSISchedule" x:Class="winEditCustomer"
+    Title="Edit Customer" Height="500" Width="600">
+        <Grid>
+
+            <local:ucEditCustomer x:Name="ucEditCustomer1" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top"/>
+
+        </Grid>
+
+</Window>

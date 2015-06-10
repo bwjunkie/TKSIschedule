@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="sqlConn.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="daTrailerHeader.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>225, 17</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="SqlDeleteCommand1.CommandText" xml:space="preserve">
+    <value>DELETE FROM dbo.tblTrailerHeader WHERE (PalletNum = @Original_PalletNum) AND (FreightCode = @Original_FreightCode) AND (FreightTermsCode = @Original_FreightTermsCode) AND (PO = @Original_PO) AND (SO = @Original_SO) AND (ShipDate = @Original_ShipDate OR @Original_ShipDate IS NULL AND ShipDate IS NULL) AND (ShipType = @Original_ShipType) AND (TrailerControl = @Original_TrailerControl) AND (TrailerNumber = @Original_TrailerNumber)</value>
+  </data>
+  <metadata name="SqlInsertCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlInsertCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlInsertCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="SqlInsertCommand1.CommandText" xml:space="preserve">
+    <value>INSERT INTO dbo.tblTrailerHeader(PalletNum, SO, PO, ShipDate, TrailerControl, FreightTermsCode, FreightCode, ShipType, TrailerNumber) VALUES (@PalletNum, @SO, @PO, @ShipDate, @TrailerControl, @FreightTermsCode, @FreightCode, @ShipType, @TrailerNumber); SELECT PalletNum, SO, PO, ShipDate, TrailerControl, FreightTermsCode, FreightCode, ShipType, TrailerNumber FROM dbo.tblTrailerHeader WHERE (PalletNum = @PalletNum) ORDER BY PO, PalletNum</value>
+  </data>
+  <metadata name="SqlSelectCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlSelectCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlSelectCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="SqlUpdateCommand1.CommandText" xml:space="preserve">
+    <value>UPDATE dbo.tblTrailerHeader SET PalletNum = @PalletNum, SO = @SO, PO = @PO, ShipDate = @ShipDate, TrailerControl = @TrailerControl, FreightTermsCode = @FreightTermsCode, FreightCode = @FreightCode, ShipType = @ShipType, TrailerNumber = @TrailerNumber WHERE (PalletNum = @Original_PalletNum) AND (FreightCode = @Original_FreightCode) AND (FreightTermsCode = @Original_FreightTermsCode) AND (PO = @Original_PO) AND (SO = @Original_SO) AND (ShipDate = @Original_ShipDate OR @Original_ShipDate IS NULL AND ShipDate IS NULL) AND (ShipType = @Original_ShipType) AND (TrailerControl = @Original_TrailerControl) AND (TrailerNumber = @Original_TrailerNumber); SELECT PalletNum, SO, PO, ShipDate, TrailerControl, FreightTermsCode, FreightCode, ShipType, TrailerNumber FROM dbo.tblTrailerHeader WHERE (PalletNum = @PalletNum) ORDER BY PO, PalletNum</value>
+  </data>
+  <metadata name="daShippingHeader.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>564, 78</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="SqlDeleteCommand3.CommandText" xml:space="preserve">
+    <value>DELETE FROM dbo.tblShippingHeader WHERE (PO = @Original_PO) AND (SupplierSONum = @Original_SupplierSONum) AND (DateClosed = @Original_DateClosed OR @Original_DateClosed IS NULL AND DateClosed IS NULL) AND (DateCompletion = @Original_DateCompletion OR @Original_DateCompletion IS NULL AND DateCompletion IS NULL) AND (DateImported = @Original_DateImported) AND (DateOrder = @Original_DateOrder OR @Original_DateOrder IS NULL AND DateOrder IS NULL) AND (OrderLines = @Original_OrderLines) AND (OrderStatus = @Original_OrderStatus) AND (StyleCode = @Original_StyleCode) AND (StyleDesc = @Original_StyleDesc) AND (SupplierCode = @Original_SupplierCode) AND (TotalCabs = @Original_TotalCabs)</value>
+  </data>
+  <metadata name="SqlInsertCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlInsertCommand3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlInsertCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="SqlInsertCommand3.CommandText" xml:space="preserve">
+    <value>INSERT INTO dbo.tblShippingHeader(SupplierCode, PO, SupplierSONum, OrderStatus, StyleCode, StyleDesc, DateImported, DateCompletion, DateClosed, DateOrder, OrderLines, TotalCabs) VALUES (@SupplierCode, @PO, @SupplierSONum, @OrderStatus, @StyleCode, @StyleDesc, @DateImported, @DateCompletion, @DateClosed, @DateOrder, @OrderLines, @TotalCabs); SELECT SupplierCode, PO, SupplierSONum, OrderStatus, StyleCode, StyleDesc, DateImported, DateCompletion, DateClosed, DateOrder, OrderLines, TotalCabs FROM dbo.tblShippingHeader WHERE (PO = @PO) AND (SupplierSONum = @SupplierSONum) ORDER BY PO</value>
+  </data>
+  <metadata name="SqlSelectCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlSelectCommand3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlSelectCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="SqlUpdateCommand3.CommandText" xml:space="preserve">
+    <value>UPDATE dbo.tblShippingHeader SET SupplierCode = @SupplierCode, PO = @PO, SupplierSONum = @SupplierSONum, OrderStatus = @OrderStatus, StyleCode = @StyleCode, StyleDesc = @StyleDesc, DateImported = @DateImported, DateCompletion = @DateCompletion, DateClosed = @DateClosed, DateOrder = @DateOrder, OrderLines = @OrderLines, TotalCabs = @TotalCabs WHERE (PO = @Original_PO) AND (SupplierSONum = @Original_SupplierSONum) AND (DateClosed = @Original_DateClosed OR @Original_DateClosed IS NULL AND DateClosed IS NULL) AND (DateCompletion = @Original_DateCompletion OR @Original_DateCompletion IS NULL AND DateCompletion IS NULL) AND (DateImported = @Original_DateImported) AND (DateOrder = @Original_DateOrder OR @Original_DateOrder IS NULL AND DateOrder IS NULL) AND (OrderLines = @Original_OrderLines) AND (OrderStatus = @Original_OrderStatus) AND (StyleCode = @Original_StyleCode) AND (StyleDesc = @Original_StyleDesc) AND (SupplierCode = @Original_SupplierCode) AND (TotalCabs = @Original_TotalCabs); SELECT SupplierCode, PO, SupplierSONum, OrderStatus, StyleCode, StyleDesc, DateImported, DateCompletion, DateClosed, DateOrder, OrderLines, TotalCabs FROM dbo.tblShippingHeader WHERE (PO = @PO) AND (SupplierSONum = @SupplierSONum) ORDER BY PO</value>
+  </data>
+  <metadata name="timerRefreshScreen.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>640, 17</value>
+  </metadata>
+  <metadata name="PrintDocument1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 54</value>
+  </metadata>
+  <metadata name="daPObySPONUM.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>148, 54</value>
+  </metadata>
+  <metadata name="SqlSelectCommand5.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlSelectCommand5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlSelectCommand5.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="SqlSelectCommand5.CommandText" xml:space="preserve">
+    <value>SELECT nID, nJobID, dCreateRecord, nVendorID, sPONum, sShipTo1, sShipTo2, sShipto3, sShipToCity, sShipToState, sShipToZip, sShiptoCounty, nBoxes, dPODate, sTerms, dRequired, sEnteredBy, nTotal, sVia, sFOB, nRetailSale, nSaleAccount, nRetailFreight, sConf, nAdd, DREC, DDEL, SRECNOTES, SDELNOTES, DFAXED, nAccount, nInvNo, nCheckNo, dSimply, bSimply, nTruck, sFilter, sBackOrder, sItems, sItemDesc, sPOType, nsalesadjust, sAdjustReason, sCurActNote, nPOSort FROM dbo.tPOHeader WHERE (sPONum = @sPONum)</value>
+  </data>
+  <metadata name="SqlUpdateCommand5.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand5.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="SqlUpdateCommand5.CommandText" xml:space="preserve">
+    <value>UPDATE dbo.tPOHeader SET dRequired = @dRequired, DREC = @DREC, DDEL = @DDEL, SDELNOTES = @SDELNOTES WHERE (nID = @Original_nID) AND (DREC = @Original_DREC OR @Original_DREC IS NULL AND DREC IS NULL) AND (DDEL = @Original_DDEL OR @Original_DDEL IS NULL AND DDEL IS NULL) AND (SDELNOTES = @Original_SDELNOTES); SELECT nID, nJobID, dCreateRecord, nVendorID, sPONum, sShipTo1, sShipTo2, sShipto3, sShipToCity, sShipToState, sShipToZip, sShiptoCounty, nBoxes, dPODate, sTerms, dRequired, sEnteredBy, nTotal, sVia, sFOB, nRetailSale, nSaleAccount, nRetailFreight, sConf, nAdd, DREC, DDEL, SRECNOTES, SDELNOTES, DFAXED, nAccount, nInvNo, nCheckNo, dSimply, bSimply, nTruck, sFilter, sBackOrder, sItems, sItemDesc, sPOType, nsalesadjust, sAdjustReason, sCurActNote, nPOSort FROM dbo.tPOHeader WHERE (nID = @nID)</value>
+  </data>
+  <metadata name="PrintDocumentBarCodeLabel.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>282, 54</value>
+  </metadata>
+  <metadata name="daPOlikeSPONUM.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 91</value>
+  </metadata>
+  <metadata name="SqlCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="SqlCommand1.CommandText" xml:space="preserve">
+    <value>SELECT nID, nJobID, dCreateRecord, nVendorID, sPONum, sShipTo1, sShipTo2, sShipto3, sShipToCity, sShipToState, sShipToZip, sShiptoCounty, nBoxes, dPODate, sTerms, dRequired, sEnteredBy, nTotal, sVia, sFOB, nRetailSale, nSaleAccount, nRetailFreight, sConf, nAdd, DREC, DDEL, SRECNOTES, SDELNOTES, DFAXED, nAccount, nInvNo, nCheckNo, dSimply, bSimply, nTruck, sFilter, sBackOrder, sItems, sItemDesc, sPOType, nsalesadjust, sAdjustReason, sCurActNote, nPOSort FROM dbo.tPOHeader WHERE (sPONum like  @sPONum)</value>
+  </data>
+  <metadata name="SqlCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="SqlCommand2.CommandText" xml:space="preserve">
+    <value>UPDATE dbo.tPOHeader SET dRequired = @dRequired, DREC = @DREC, DDEL = @DDEL, SDELNOTES = @SDELNOTES WHERE (nID = @Original_nID) AND (DREC = @Original_DREC OR @Original_DREC IS NULL AND DREC IS NULL) AND (DDEL = @Original_DDEL OR @Original_DDEL IS NULL AND DDEL IS NULL) AND (SDELNOTES = @Original_SDELNOTES); SELECT nID, nJobID, dCreateRecord, nVendorID, sPONum, sShipTo1, sShipTo2, sShipto3, sShipToCity, sShipToState, sShipToZip, sShiptoCounty, nBoxes, dPODate, sTerms, dRequired, sEnteredBy, nTotal, sVia, sFOB, nRetailSale, nSaleAccount, nRetailFreight, sConf, nAdd, DREC, DDEL, SRECNOTES, SDELNOTES, DFAXED, nAccount, nInvNo, nCheckNo, dSimply, bSimply, nTruck, sFilter, sBackOrder, sItems, sItemDesc, sPOType, nsalesadjust, sAdjustReason, sCurActNote, nPOSort FROM dbo.tPOHeader WHERE (nID = @nID)</value>
+  </data>
+  <metadata name="daVendor.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>279, 91</value>
+  </metadata>
+  <metadata name="SqlCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlCommand3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="DsTKSI1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>789, 17</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand4.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand4.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand4.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>398, 91</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand4.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="SqlUpdateCommand4.CommandText" xml:space="preserve">
+    <value>UPDATE dbo.tblShippingItems SET SupplierSO = @SupplierSO, LineNumber = @LineNumber, Quantity = @Quantity, ProdDesc = @ProdDesc, CabType = @CabType, ColorDesc = @ColorDesc, ColorCode = @ColorCode, ProdCode = @ProdCode, StyleCode = @StyleCode, StyleDesc = @StyleDesc, DateImported = @DateImported, DateReceived = @DateReceived, DateDelivered = @DateDelivered, DateLastChanged = @DateLastChanged, SpecialNote1 = @SpecialNote1, SpecialNote2 = @SpecialNote2, QuantityRec = @QuantityRec, QuantityDel = @QuantityDel WHERE (LineNumber = @Original_LineNumber)</value>
+  </data>
+  <metadata name="SqlInsertCommand4.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlInsertCommand4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>601, 91</value>
+  </metadata>
+  <metadata name="SqlInsertCommand4.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="SqlInsertCommand4.CommandText" xml:space="preserve">
+    <value>INSERT INTO dbo.tblShippingItems(SupplierSO, LineNumber, Quantity, ProdDesc, CabType, ColorDesc, ColorCode, ProdCode, StyleCode, StyleDesc, DateImported, DateReceived, DateDelivered, DateLastChanged, SpecialNote1, SpecialNote2, QuantityRec, QuantityDel) VALUES (@SupplierSO, @LineNumber, @Quantity, @ProdDesc, @CabType, @ColorDesc, @ColorCode, @ProdCode, @StyleCode, @StyleDesc, @DateImported, @DateReceived, @DateDelivered, @DateLastChanged, @SpecialNote1, @SpecialNote2, @QuantityRec, @QuantityDel)</value>
+  </data>
+  <metadata name="SqlSelectCommand4.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlSelectCommand4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlSelectCommand4.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="SqlSelectCommand4.CommandText" xml:space="preserve">
+    <value>SELECT dbo.tblShippingItems.SupplierSO, dbo.tblShippingItems.LineNumber, dbo.tblShippingItems.Quantity, dbo.tblShippingItems.ProdDesc, dbo.tblShippingItems.CabType, dbo.tblShippingItems.ColorDesc, dbo.tblShippingItems.ColorCode, dbo.tblShippingItems.ProdCode, dbo.tblShippingItems.StyleCode, dbo.tblShippingItems.StyleDesc, dbo.tblShippingItems.DateImported, dbo.tblShippingItems.DateReceived, dbo.tblShippingItems.DateDelivered, dbo.tblShippingItems.DateLastChanged, dbo.tblShippingItems.SpecialNote1, dbo.tblShippingItems.SpecialNote2, dbo.tblShippingItems.QuantityRec, dbo.tblShippingItems.QuantityDel FROM dbo.tblShippingItems INNER JOIN dbo.tblShippingHeader ON dbo.tblShippingItems.SupplierSO = dbo.tblShippingHeader.SupplierSONum WHERE (dbo.tblShippingHeader.PO LIKE @PO)</value>
+  </data>
+  <metadata name="daShippingDetail.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>749, 78</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>154</value>
+  </metadata>
+</root>

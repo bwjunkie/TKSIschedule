@@ -1,0 +1,33 @@
+﻿<Window x:Class="windowInvoiceAltert"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="700"  Height="650"  xmlns:local="clr-namespace:TKSISchedule" WindowStartupLocation="CenterScreen">
+      <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+              <Label Padding="4,4,140,4"  Content="Invoice Alert Report (All unpaid jobs with 50-50 or COD)" Background="LightBlue" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" />
+            <CheckBox VerticalAlignment="Center" Click="chkShowHighlightedOnly_Click_1"  x:Name="chkShowHighlightedOnly"  Content="Show highlighted only (two week letter)"></CheckBox>
+         </StackPanel>
+       <ListBox Name="lbReport" ItemsSource="{Binding}" Height="600" MaxHeight="600"  >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                        <Border BorderThickness="1" BorderBrush="LightGray" >
+                            <StackPanel Orientation="Vertical" Background="{Binding colorHighlighted}" Margin="8,1" >  
+                                  <TextBlock TextWrapping="Wrap" Text="{Binding strJobCustDesc}" Background="{Binding colorHighlighted}" />
+                                  <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                         <TextBlock Text="{Binding strCustPayment}" Width="250" />
+                                        <TextBlock Text="{Binding strContract}" Width="250" /> 
+                                        <Button Content="Print Letter" Visibility="{Binding visjob}" Width="100" Click="Button_Click_1"></Button>
+                                <Button Content="Open Job" Visibility="{Binding visjob}" Width="100" Click="btnOpenJobClick"></Button>
+                            </StackPanel>
+                            </StackPanel>    
+                        </Border>
+                                  
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+        </ListBox>
+   </StackPanel>
+</Window>

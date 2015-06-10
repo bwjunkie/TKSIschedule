@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsMYSQL" targetNamespace="http://tempuri.org/dsMYSQL.xsd" xmlns:mstns="http://tempuri.org/dsMYSQL.xsd" xmlns="http://tempuri.org/dsMYSQL.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="simplyConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="simplyConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.TKSISchedule.My.MySettings.GlobalReference.Default.simplyConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tcustomrTableAdapter" GeneratorDataComponentClassName="tcustomrTableAdapter" Name="tcustomr" UserDataComponentName="tcustomrTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="simplyConnectionString (MySettings)" DbObjectName="simply.tcustomr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  lId, sName, dtASDate, tmASTime, sASUserId, sASOrgId, sCntcName, sStreet1, sStreet2, sCity, sProvState, sCountry, sPostalZip, sPhone1, sPhone2, sFax, dCrLimit, dAmtYtd, 
+               dLastYrAmt, fDiscPay, nDiscDay, nNetDay, bStatement, bContOnChq, bEmailForm, bEmailCnfm, bUseSimply, bUseMyItem, dAmtYtdHm, dAmtLYHm, dCrLimitHm, bMemInToDo, 
+               bUsed, lCurrncyId, sEmail, sWebSite, bUseMailAd, bInactive, lTaxCode, bIntCust, lDfltDptId, lAcDefRev, lDpDefRev, lCompId, nLangPref, lPrcListId, lModVer, dtSince, dtLastSal, 
+               bSyncOL, lInvLocId, dStdDisc, lSalManID, bDirectPay
+FROM     tcustomr
+ORDER BY lId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="lId" DataSetColumn="lId" />
+              <Mapping SourceColumn="sName" DataSetColumn="sName" />
+              <Mapping SourceColumn="dtASDate" DataSetColumn="dtASDate" />
+              <Mapping SourceColumn="tmASTime" DataSetColumn="tmASTime" />
+              <Mapping SourceColumn="sASUserId" DataSetColumn="sASUserId" />
+              <Mapping SourceColumn="sASOrgId" DataSetColumn="sASOrgId" />
+              <Mapping SourceColumn="sCntcName" DataSetColumn="sCntcName" />
+              <Mapping SourceColumn="sStreet1" DataSetColumn="sStreet1" />
+              <Mapping SourceColumn="sStreet2" DataSetColumn="sStreet2" />
+              <Mapping SourceColumn="sCity" DataSetColumn="sCity" />
+              <Mapping SourceColumn="sProvState" DataSetColumn="sProvState" />
+              <Mapping SourceColumn="sCountry" DataSetColumn="sCountry" />
+              <Mapping SourceColumn="sPostalZip" DataSetColumn="sPostalZip" />
+              <Mapping SourceColumn="sPhone1" DataSetColumn="sPhone1" />
+              <Mapping SourceColumn="sPhone2" DataSetColumn="sPhone2" />
+              <Mapping SourceColumn="sFax" DataSetColumn="sFax" />
+              <Mapping SourceColumn="dCrLimit" DataSetColumn="dCrLimit" />
+              <Mapping SourceColumn="dAmtYtd" DataSetColumn="dAmtYtd" />
+              <Mapping SourceColumn="dLastYrAmt" DataSetColumn="dLastYrAmt" />
+              <Mapping SourceColumn="fDiscPay" DataSetColumn="fDiscPay" />
+              <Mapping SourceColumn="nDiscDay" DataSetColumn="nDiscDay" />
+              <Mapping SourceColumn="nNetDay" DataSetColumn="nNetDay" />
+              <Mapping SourceColumn="bStatement" DataSetColumn="bStatement" />
+              <Mapping SourceColumn="bContOnChq" DataSetColumn="bContOnChq" />
+              <Mapping SourceColumn="bEmailForm" DataSetColumn="bEmailForm" />
+              <Mapping SourceColumn="bEmailCnfm" DataSetColumn="bEmailCnfm" />
+              <Mapping SourceColumn="bUseSimply" DataSetColumn="bUseSimply" />
+              <Mapping SourceColumn="bUseMyItem" DataSetColumn="bUseMyItem" />
+              <Mapping SourceColumn="dAmtYtdHm" DataSetColumn="dAmtYtdHm" />
+              <Mapping SourceColumn="dAmtLYHm" DataSetColumn="dAmtLYHm" />
+              <Mapping SourceColumn="dCrLimitHm" DataSetColumn="dCrLimitHm" />
+              <Mapping SourceColumn="bMemInToDo" DataSetColumn="bMemInToDo" />
+              <Mapping SourceColumn="bUsed" DataSetColumn="bUsed" />
+              <Mapping SourceColumn="lCurrncyId" DataSetColumn="lCurrncyId" />
+              <Mapping SourceColumn="sEmail" DataSetColumn="sEmail" />
+              <Mapping SourceColumn="sWebSite" DataSetColumn="sWebSite" />
+              <Mapping SourceColumn="bUseMailAd" DataSetColumn="bUseMailAd" />
+              <Mapping SourceColumn="bInactive" DataSetColumn="bInactive" />
+              <Mapping SourceColumn="lTaxCode" DataSetColumn="lTaxCode" />
+              <Mapping SourceColumn="bIntCust" DataSetColumn="bIntCust" />
+              <Mapping SourceColumn="lDfltDptId" DataSetColumn="lDfltDptId" />
+              <Mapping SourceColumn="lAcDefRev" DataSetColumn="lAcDefRev" />
+              <Mapping SourceColumn="lDpDefRev" DataSetColumn="lDpDefRev" />
+              <Mapping SourceColumn="lCompId" DataSetColumn="lCompId" />
+              <Mapping SourceColumn="nLangPref" DataSetColumn="nLangPref" />
+              <Mapping SourceColumn="lPrcListId" DataSetColumn="lPrcListId" />
+              <Mapping SourceColumn="lModVer" DataSetColumn="lModVer" />
+              <Mapping SourceColumn="dtSince" DataSetColumn="dtSince" />
+              <Mapping SourceColumn="dtLastSal" DataSetColumn="dtLastSal" />
+              <Mapping SourceColumn="bSyncOL" DataSetColumn="bSyncOL" />
+              <Mapping SourceColumn="lInvLocId" DataSetColumn="lInvLocId" />
+              <Mapping SourceColumn="dStdDisc" DataSetColumn="dStdDisc" />
+              <Mapping SourceColumn="lSalManID" DataSetColumn="lSalManID" />
+              <Mapping SourceColumn="bDirectPay" DataSetColumn="bDirectPay" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tvendorTableAdapter" GeneratorDataComponentClassName="tvendorTableAdapter" Name="tvendor" UserDataComponentName="tvendorTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="simplyConnectionString (MySettings)" DbObjectName="simply.tvendor" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT     lId, sName, dtASDate, tmASTime, sASUserId, sASOrgId, sCntcName, sStreet1, sStreet2, sCity, sProvState, sCountry, sPostalZip, sPhone1, sPhone2, 
+                      sFax, sTaxId, dAmtYtd, dLastYrAmt, dLCYrAdjPy, dCCYrAdjPy, dLCYrClrPy, dCCYrClrPy, fDiscPay, nDiscDay, nNetDay, bStatement, bContOnChq, 
+                      bDiscBfrTx, bMisc1099, nMisc1099B, dAmtYtdHm, dAmtLYHm, dLCYrAPyHm, dCCYrAPyHm, dLCYrCPyHm, dCCYrCPyHm, bUsed, lCurrncyId, 
+                      bEmailForm, bEmailCnfm, bUseSimply, bUseMyItem, bMemInToDo, sEmail, sWebSite, bInactive, bChrgeDuty, lTaxCode, lAcDefExp, lDpDefExp, 
+                      lDfltDptId, lCompId, nLangPref, lModVer, dtSince, dtLastPur, bSyncOL, lInvLocId
+FROM         tvendor
+ORDER BY lId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="lId" DataSetColumn="lId" />
+              <Mapping SourceColumn="sName" DataSetColumn="sName" />
+              <Mapping SourceColumn="dtASDate" DataSetColumn="dtASDate" />
+              <Mapping SourceColumn="tmASTime" DataSetColumn="tmASTime" />
+              <Mapping SourceColumn="sASUserId" DataSetColumn="sASUserId" />
+              <Mapping SourceColumn="sASOrgId" DataSetColumn="sASOrgId" />
+              <Mapping SourceColumn="sCntcName" DataSetColumn="sCntcName" />
+              <Mapping SourceColumn="sStreet1" DataSetColumn="sStreet1" />
+              <Mapping SourceColumn="sStreet2" DataSetColumn="sStreet2" />
+              <Mapping SourceColumn="sCity" DataSetColumn="sCity" />
+              <Mapping SourceColumn="sProvState" DataSetColumn="sProvState" />
+              <Mapping SourceColumn="sCountry" DataSetColumn="sCountry" />
+              <Mapping SourceColumn="sPostalZip" DataSetColumn="sPostalZip" />
+              <Mapping SourceColumn="sPhone1" DataSetColumn="sPhone1" />
+              <Mapping SourceColumn="sPhone2" DataSetColumn="sPhone2" />
+              <Mapping SourceColumn="sFax" DataSetColumn="sFax" />
+              <Mapping SourceColumn="sTaxId" DataSetColumn="sTaxId" />
+              <Mapping SourceColumn="dAmtYtd" DataSetColumn="dAmtYtd" />
+              <Mapping SourceColumn="dLastYrAmt" DataSetColumn="dLastYrAmt" />
+              <Mapping SourceColumn="dLCYrAdjPy" DataSetColumn="dLCYrAdjPy" />
+              <Mapping SourceColumn="dCCYrAdjPy" DataSetColumn="dCCYrAdjPy" />
+              <Mapping SourceColumn="dLCYrClrPy" DataSetColumn="dLCYrClrPy" />
+              <Mapping SourceColumn="dCCYrClrPy" DataSetColumn="dCCYrClrPy" />
+              <Mapping SourceColumn="fDiscPay" DataSetColumn="fDiscPay" />
+              <Mapping SourceColumn="nDiscDay" DataSetColumn="nDiscDay" />
+              <Mapping SourceColumn="nNetDay" DataSetColumn="nNetDay" />
+              <Mapping SourceColumn="bStatement" DataSetColumn="bStatement" />
+              <Mapping SourceColumn="bContOnChq" DataSetColumn="bContOnChq" />
+              <Mapping SourceColumn="bDiscBfrTx" DataSetColumn="bDiscBfrTx" />
+              <Mapping SourceColumn="bMisc1099" DataSetColumn="bMisc1099" />
+              <Mapping SourceColumn="nMisc1099B" DataSetColumn="nMisc1099B" />
+              <Mapping SourceColumn="dAmtYtdHm" DataSetColumn="dAmtYtdHm" />
+              <Mapping SourceColumn="dAmtLYHm" DataSetColumn="dAmtLYHm" />
+              <Mapping SourceColumn="dLCYrAPyHm" DataSetColumn="dLCYrAPyHm" />
+              <Mapping SourceColumn="dCCYrAPyHm" DataSetColumn="dCCYrAPyHm" />
+              <Mapping SourceColumn="dLCYrCPyHm" DataSetColumn="dLCYrCPyHm" />
+              <Mapping SourceColumn="dCCYrCPyHm" DataSetColumn="dCCYrCPyHm" />
+              <Mapping SourceColumn="bUsed" DataSetColumn="bUsed" />
+              <Mapping SourceColumn="lCurrncyId" DataSetColumn="lCurrncyId" />
+              <Mapping SourceColumn="bEmailForm" DataSetColumn="bEmailForm" />
+              <Mapping SourceColumn="bEmailCnfm" DataSetColumn="bEmailCnfm" />
+              <Mapping SourceColumn="bUseSimply" DataSetColumn="bUseSimply" />
+              <Mapping SourceColumn="bUseMyItem" DataSetColumn="bUseMyItem" />
+              <Mapping SourceColumn="bMemInToDo" DataSetColumn="bMemInToDo" />
+              <Mapping SourceColumn="sEmail" DataSetColumn="sEmail" />
+              <Mapping SourceColumn="sWebSite" DataSetColumn="sWebSite" />
+              <Mapping SourceColumn="bInactive" DataSetColumn="bInactive" />
+              <Mapping SourceColumn="bChrgeDuty" DataSetColumn="bChrgeDuty" />
+              <Mapping SourceColumn="lTaxCode" DataSetColumn="lTaxCode" />
+              <Mapping SourceColumn="lAcDefExp" DataSetColumn="lAcDefExp" />
+              <Mapping SourceColumn="lDpDefExp" DataSetColumn="lDpDefExp" />
+              <Mapping SourceColumn="lDfltDptId" DataSetColumn="lDfltDptId" />
+              <Mapping SourceColumn="lCompId" DataSetColumn="lCompId" />
+              <Mapping SourceColumn="nLangPref" DataSetColumn="nLangPref" />
+              <Mapping SourceColumn="lModVer" DataSetColumn="lModVer" />
+              <Mapping SourceColumn="dtSince" DataSetColumn="dtSince" />
+              <Mapping SourceColumn="dtLastPur" DataSetColumn="dtLastPur" />
+              <Mapping SourceColumn="bSyncOL" DataSetColumn="bSyncOL" />
+              <Mapping SourceColumn="lInvLocId" DataSetColumn="lInvLocId" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tpurordrTableAdapter" GeneratorDataComponentClassName="tpurordrTableAdapter" Name="tpurordr" UserDataComponentName="tpurordrTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="simplyConnectionString (MySettings)" DbObjectName="simply.tpurordr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `simply`.`tpurordr` WHERE ((`lId` = @Original_lId))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_lId" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="lId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `simply`.`tpurordr` (`lId`, `lVenId`, `sPONum`, `dtASDate`, `tmASTime`, `sASUserId`, `sASOrgId`, `sName`, `sFrom1`, `sFrom2`, `sFrom3`, `sFrom4`, `sFrom5`, `sShipTo1`, `sShipTo2`, `sShipTo3`, `sShipTo4`, `sShipTo5`, `sShipTo6`, `dtReqDate`, `dtPODate`, `bPrinted`, `bEmailed`, `sUser`, `fDiscPer`, `nDiscDay`, `nNetDay`, `dTotal`, `lNxtJourId`, `sShipper`, `bQuote`, `bImport`, `bDutyStore`, `lCurrncyId`, `dExchRate`, `bPrePaid`, `lPaidJor`, `nPdType`, `sCrdName`, `lAcctNum`, `lDepId`, `bCleared`, `lChqId`, `lInvLocId`, `bRmBPLst`, `nLangPref`, `nFilled`, `bReversed`, `bReversal`, `bUseVenItm`) VALUES (@lId, @lVenId, @sPONum, @dtASDate, @tmASTime, @sASUserId, @sASOrgId, @sName, @sFrom1, @sFrom2, @sFrom3, @sFrom4, @sFrom5, @sShipTo1, @sShipTo2, @sShipTo3, @sShipTo4, @sShipTo5, @sShipTo6, @dtReqDate, @dtPODate, @bPrinted, @bEmailed, @sUser, @fDiscPer, @nDiscDay, @nNetDay, @dTotal, @lNxtJourId, @sShipper, @bQuote, @bImport, @bDutyStore, @lCurrncyId, @dExchRate, @bPrePaid, @lPaidJor, @nPdType, @sCrdName, @lAcctNum, @lDepId, @bCleared, @lChqId, @lInvLocId, @bRmBPLst, @nLangPref, @nFilled, @bReversed, @bReversal, @bUseVenItm)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@lId" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="lId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@lVenId" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="lVenId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sPONum" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sPONum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dtASDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dtASDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@tmASTime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="tmASTime" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sASUserId" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sASUserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sASOrgId" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sASOrgId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sFrom1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sFrom1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sFrom2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sFrom2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sFrom3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sFrom3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sFrom4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sFrom4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sFrom5" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sFrom5" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sShipTo1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sShipTo1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sShipTo2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sShipTo2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sShipTo3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sShipTo3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sShipTo4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sShipTo4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sShipTo5" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sShipTo5" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sShipTo6" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sShipTo6" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dtReqDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dtReqDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dtPODate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dtPODate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@bPrinted" Precision="0" ProviderType="UByte" Scale="0" Size="0" SourceColumn="bPrinted" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@bEmailed" Precision="0" ProviderType="UByte" Scale="0" Size="0" SourceColumn="bEmailed" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sUser" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sUser" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@fDiscPer" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="fDiscPer" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@nDiscDay" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="nDiscDay" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@nNetDay" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="nNetDay" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@dTotal" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="dTotal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@lNxtJourId" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="lNxtJourId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sShipper" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sShipper" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@bQuote" Precision="0" ProviderType="UByte" Scale="0" Size="0" SourceColumn="bQuote" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@bImport" Precision="0" ProviderType="UByte" Scale="0" Size="0" SourceColumn="bImport" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@bDutyStore" Precision="0" ProviderType="UByte" Scale="0" Size="0" SourceColumn="bDutyStore" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@lCurrncyId" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="lCurrncyId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@dExchRate" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="dExchRate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@bPrePaid" Precision="0" ProviderType="UByte" Scale="0" Size="0" SourceColumn="bPrePaid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@lPaidJor" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="lPaidJor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@nPdType" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="nPdType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sCrdName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sCrdName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@lAcctNum" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="lAcctNum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@lDepId" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="lDepId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@bCleared" Precision="0" ProviderType="UByte" Scale="0" Size="0" SourceColumn="bCleared" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@lChqId" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="lChqId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@lInvLocId" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="lInvLocId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@bRmBPLst" Precision="0" ProviderType="UByte" Scale="0" Size="0" SourceColumn="bRmBPLst" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@nLangPref" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="nLangPref" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@nFilled" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="nFilled" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@bReversed" Precision="0" ProviderType="UByte" Scale="0" Size="0" SourceColumn="bReversed" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@bReversal" Precision="0" ProviderType="UByte" Scale="0" Size="0" SourceColumn="bReversal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@bUseVenItm" Precision="0" ProviderType="UByte" Scale="0" Size="0" SourceColumn="bUseVenItm" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  lId, lVenId, sPONum, dtASDate, tmASTime, sASUserId, sASOrgId, sName, sFrom1, sFrom2, sFrom3, sFrom4, sFrom5, sShipTo1, sShipTo2, sShipTo3, sShipTo4, sShipTo5, sShipTo6, 
+               dtReqDate, dtPODate, bPrinted, bEmailed, sUser, fDiscPer, nDiscDay, nNetDay, dTotal, lNxtJourId, sShipper, bQuote, bImport, bDutyStore, lCurrncyId, dExchRate, bPrePaid, lPaidJor, 
+               nPdType, sCrdName, lAcctNum, lDepId, bCleared, lChqId, lInvLocId, bRmBPLst, nLangPref, nFilled, bReversed, bReversal, bUseVenItm
+FROM     tpurordr</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `simply`.`tpurordr` SET `lId` = @lId, `lVenId` = @lVenId, `sPONum` = @sPONum, `dtASDate` = @dtASDate, `tmASTime` = @tmASTime, `sASUserId` = @sASUserId, `sASOrgId` = @sASOrgId, `sName` = @sName, `sFrom1` = @sFrom1, `sFrom2` = @sFrom2, `sFrom3` = @sFrom3, `sFrom4` = @sFrom4, `sFrom5` = @sFrom5, `sShipTo1` = @sShipTo1, `sShipTo2` = @sShipTo2, `sShipTo3` = @sShipTo3, `sShipTo4` = @sShipTo4, `sShipTo5` = @sShipTo5, `sShipTo6` = @sShipTo6, `dtReqDate` = @dtReqDate, `dtPODate` = @dtPODate, `bPrinted` = @bPrinted, `bEmailed` = @bEmailed, `sUser` = @sUser, `fDiscPer` = @fDiscPer, `nDiscDay` = @nDiscDay, `nNetDay` = @nNetDay, `dTotal` = @dTotal, `lNxtJourId` = @lNxtJourId, `sShipper` = @sShipper, `bQuote` = @bQuote, `bImport` = @bImport, `bDutyStore` = @bDutyStore, `lCurrncyId` = @lCurrncyId, `dExchRate` = @dExchRate, `bPrePaid` = @bPrePaid, `lPaidJor` = @lPaidJor, `nPdType` = @nPdType, `sCrdName` = @sCrdName, `lAcctNum` = @lAcctNum, `lDepId` = @lDepId, `bCleared` = @bCleared, `lChqId` = @lChqId, `lInvLocId` = @lInvLocId, `bRmBPLst` = @bRmBPLst, `nLangPref` = @nLangPref, `nFilled` = @nFilled, `bReversed` = @bReversed, `bReversal` = @bReversal, `bUseVenItm` = @bUseVenItm WHERE ((`lId` = @Original_lId))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@lId" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="lId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@lVenId" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="lVenId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sPONum" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sPONum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dtASDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dtASDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@tmASTime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="tmASTime" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sASUserId" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sASUserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sASOrgId" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sASOrgId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sFrom1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sFrom1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sFrom2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sFrom2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sFrom3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sFrom3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sFrom4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sFrom4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sFrom5" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sFrom5" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sShipTo1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sShipTo1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sShipTo2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sShipTo2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sShipTo3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sShipTo3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sShipTo4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sShipTo4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sShipTo5" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sShipTo5" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sShipTo6" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sShipTo6" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dtReqDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dtReqDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dtPODate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dtPODate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@bPrinted" Precision="0" ProviderType="UByte" Scale="0" Size="0" SourceColumn="bPrinted" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@bEmailed" Precision="0" ProviderType="UByte" Scale="0" Size="0" SourceColumn="bEmailed" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sUser" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sUser" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@fDiscPer" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="fDiscPer" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@nDiscDay" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="nDiscDay" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@nNetDay" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="nNetDay" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@dTotal" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="dTotal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@lNxtJourId" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="lNxtJourId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sShipper" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sShipper" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@bQuote" Precision="0" ProviderType="UByte" Scale="0" Size="0" SourceColumn="bQuote" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@bImport" Precision="0" ProviderType="UByte" Scale="0" Size="0" SourceColumn="bImport" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@bDutyStore" Precision="0" ProviderType="UByte" Scale="0" Size="0" SourceColumn="bDutyStore" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@lCurrncyId" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="lCurrncyId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@dExchRate" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="dExchRate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@bPrePaid" Precision="0" ProviderType="UByte" Scale="0" Size="0" SourceColumn="bPrePaid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@lPaidJor" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="lPaidJor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@nPdType" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="nPdType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sCrdName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sCrdName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@lAcctNum" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="lAcctNum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@lDepId" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="lDepId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@bCleared" Precision="0" ProviderType="UByte" Scale="0" Size="0" SourceColumn="bCleared" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@lChqId" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="lChqId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@lInvLocId" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="lInvLocId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@bRmBPLst" Precision="0" ProviderType="UByte" Scale="0" Size="0" SourceColumn="bRmBPLst" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@nLangPref" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="nLangPref" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@nFilled" Precision="0" ProviderType="Int16" Scale="0" Size="0" SourceColumn="nFilled" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@bReversed" Precision="0" ProviderType="UByte" Scale="0" Size="0" SourceColumn="bReversed" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@bReversal" Precision="0" ProviderType="UByte" Scale="0" Size="0" SourceColumn="bReversal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@bUseVenItm" Precision="0" ProviderType="UByte" Scale="0" Size="0" SourceColumn="bUseVenItm" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_lId" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="lId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="lId" DataSetColumn="lId" />
+              <Mapping SourceColumn="lVenId" DataSetColumn="lVenId" />
+              <Mapping SourceColumn="sPONum" DataSetColumn="sPONum" />
+              <Mapping SourceColumn="dtASDate" DataSetColumn="dtASDate" />
+              <Mapping SourceColumn="tmASTime" DataSetColumn="tmASTime" />
+              <Mapping SourceColumn="sASUserId" DataSetColumn="sASUserId" />
+              <Mapping SourceColumn="sASOrgId" DataSetColumn="sASOrgId" />
+              <Mapping SourceColumn="sName" DataSetColumn="sName" />
+              <Mapping SourceColumn="sFrom1" DataSetColumn="sFrom1" />
+              <Mapping SourceColumn="sFrom2" DataSetColumn="sFrom2" />
+              <Mapping SourceColumn="sFrom3" DataSetColumn="sFrom3" />
+              <Mapping SourceColumn="sFrom4" DataSetColumn="sFrom4" />
+              <Mapping SourceColumn="sFrom5" DataSetColumn="sFrom5" />
+              <Mapping SourceColumn="sShipTo1" DataSetColumn="sShipTo1" />
+              <Mapping SourceColumn="sShipTo2" DataSetColumn="sShipTo2" />
+              <Mapping SourceColumn="sShipTo3" DataSetColumn="sShipTo3" />
+              <Mapping SourceColumn="sShipTo4" DataSetColumn="sShipTo4" />
+              <Mapping SourceColumn="sShipTo5" DataSetColumn="sShipTo5" />
+              <Mapping SourceColumn="sShipTo6" DataSetColumn="sShipTo6" />
+              <Mapping SourceColumn="dtReqDate" DataSetColumn="dtReqDate" />
+              <Mapping SourceColumn="dtPODate" DataSetColumn="dtPODate" />
+              <Mapping SourceColumn="bPrinted" DataSetColumn="bPrinted" />
+              <Mapping SourceColumn="bEmailed" DataSetColumn="bEmailed" />
+              <Mapping SourceColumn="sUser" DataSetColumn="sUser" />
+              <Mapping SourceColumn="fDiscPer" DataSetColumn="fDiscPer" />
+              <Mapping SourceColumn="nDiscDay" DataSetColumn="nDiscDay" />
+              <Mapping SourceColumn="nNetDay" DataSetColumn="nNetDay" />
+              <Mapping SourceColumn="dTotal" DataSetColumn="dTotal" />
+              <Mapping SourceColumn="lNxtJourId" DataSetColumn="lNxtJourId" />
+              <Mapping SourceColumn="sShipper" DataSetColumn="sShipper" />
+              <Mapping SourceColumn="bQuote" DataSetColumn="bQuote" />
+              <Mapping SourceColumn="bImport" DataSetColumn="bImport" />
+              <Mapping SourceColumn="bDutyStore" DataSetColumn="bDutyStore" />
+              <Mapping SourceColumn="lCurrncyId" DataSetColumn="lCurrncyId" />
+              <Mapping SourceColumn="dExchRate" DataSetColumn="dExchRate" />
+              <Mapping SourceColumn="bPrePaid" DataSetColumn="bPrePaid" />
+              <Mapping SourceColumn="lPaidJor" DataSetColumn="lPaidJor" />
+              <Mapping SourceColumn="nPdType" DataSetColumn="nPdType" />
+              <Mapping SourceColumn="sCrdName" DataSetColumn="sCrdName" />
+              <Mapping SourceColumn="lAcctNum" DataSetColumn="lAcctNum" />
+              <Mapping SourceColumn="lDepId" DataSetColumn="lDepId" />
+              <Mapping SourceColumn="bCleared" DataSetColumn="bCleared" />
+              <Mapping SourceColumn="lChqId" DataSetColumn="lChqId" />
+              <Mapping SourceColumn="lInvLocId" DataSetColumn="lInvLocId" />
+              <Mapping SourceColumn="bRmBPLst" DataSetColumn="bRmBPLst" />
+              <Mapping SourceColumn="nLangPref" DataSetColumn="nLangPref" />
+              <Mapping SourceColumn="nFilled" DataSetColumn="nFilled" />
+              <Mapping SourceColumn="bReversed" DataSetColumn="bReversed" />
+              <Mapping SourceColumn="bReversal" DataSetColumn="bReversal" />
+              <Mapping SourceColumn="bUseVenItm" DataSetColumn="bUseVenItm" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="simplyConnectionString (MySettings)" DbObjectName="simply.tpurordr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBySPONUM" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBySPONUM" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBySPONUM">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT bCleared, bDutyStore, bEmailed, bImport, bPrePaid, bPrinted, bQuote, bReversal, bReversed, bRmBPLst, bUseVenItm, dExchRate, dTotal, dtASDate, dtPODate, dtReqDate, fDiscPer, lAcctNum, lChqId, lCurrncyId, lDepId, lId, lInvLocId, lNxtJourId, lPaidJor, lVenId, nDiscDay, nFilled, nLangPref, nNetDay, nPdType, sASOrgId, sASUserId, sCrdName, sFrom1, sFrom2, sFrom3, sFrom4, sFrom5, sName, sPONum, sShipTo1, sShipTo2, sShipTo3, sShipTo4, sShipTo5, sShipTo6, sShipper, sUser, tmASTime FROM tpurordr WHERE (sPONum = @sPONum) ORDER BY lId</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="sPONum" ColumnName="sPONum" DataSourceName="simply.tpurordr" D

@@ -1,0 +1,80 @@
+﻿<Window x:Class="Receiving"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Crestwood Receiving"  SizeToContent="WidthAndHeight"
+        xmlns:local="clr-namespace:TKSISchedule" FontSize="12" >
+    <Viewbox> 
+      
+          <StackPanel Orientation="Horizontal" VerticalAlignment="Top" >  
+      
+
+        <ListView  AlternationCount="2" SelectedItem="{Binding packageselected}" Height="630" Width="840" Margin="0" x:Name="myItemsControl" ItemsSource="{Binding collistTruckPackages}">
+               <ListView.ItemTemplate>
+                     <DataTemplate>                 
+                        <!--<StackPanel Orientation="Vertical">-->                            
+                        <StackPanel Orientation="Horizontal" Background="{Binding brushReceived}" >                          
+                            <TextBlock Text="{Binding Description}" Margin="40,0,0,0" Width="500" TextWrapping="WrapWithOverflow">
+                                <TextBlock.RenderTransform>
+                                    <ScaleTransform/>
+                                </TextBlock.RenderTransform>
+                            </TextBlock>
+                            
+                            <CheckBox Background="{StaticResource brushFadedYellow}" Content="Rec " IsChecked="{Binding Received,Mode=TwoWay}" Width="70"/>
+                            <!--<CheckBox Background="{StaticResource brushFadedGreen}" Content="Del" IsChecked="{Binding Delivered,Mode=TwoWay}" Width="70"/>-->
+                              
+                            
+                            <TextBlock Text="{Binding LabelID}" Width="80" Margin="30,0,0,0"/>
+                        </StackPanel> 
+                            <!--<Separator Width="Auto" Height="1"></Separator>
+                        </StackPanel>-->                                      
+                        
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+              
+                    <ListView.GroupStyle>
+                    <GroupStyle>
+                        <GroupStyle.ContainerStyle>
+                            
+                            <Style TargetType="{x:Type GroupItem}">
+                 
+                            <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type GroupItem}">
+                                            <StackPanel Orientation="Vertical">
+                                                <TextBlock Background="LightGray" Text="{Binding Name}"></TextBlock>
+                                            
+                                                     <!--<GroupBox Header="{Binding Name}">-->
+                                                   <ItemsPresenter />
+                                                     <!--</GroupBox>-->
+                                            </StackPanel>
+                                            
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </GroupStyle.ContainerStyle>
+                    </GroupStyle>
+                    </ListView.GroupStyle>
+           
+            </ListView>
+            <StackPanel Orientation="Vertical" Width="130" Margin="20,0">
+                <Label FontWeight="Bold" Content="Trucks:"/>
+                <ListBox  x:Name="lbTruckContents" MaxHeight="400" ItemsSource="{Binding listTrucks}" SelectedItem="{Binding Path=SelectedTruck, Mode=TwoWay}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <CheckBox Margin="2,20,2,2" Content="Hide Received" x:Name="chkHideReceived" IsChecked="{Binding HideReceived,Mode=TwoWay}"/>
+                <Button Margin="4,10" Content="Refresh" x:Name="btnRefresh" Command="{Binding refreshcommand}"/>
+                <Button  Margin="4,10" Command="{Binding cmdprintlabel}"  Content="Print Label"/>
+                <Button  Margin="4,10" Command="{Binding cmdprintreceivingreport}"  Content="Receiving Report"/>
+            </StackPanel>
+        </StackPanel>
+     
+    </Viewbox>
+</Window>
+
+    
+    

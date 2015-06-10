@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 22.875, 23.25" name="linqTKSI">
+  <DataContextMoniker Name="/linqTKSIDataContext" />
+  <nestedChildShapes>
+    <classShape Id="e054fef2-a9d3-4cf3-8ddf-74ae44795ea6" absoluteBounds="0.625, 3.375, 2, 9.4629541015625">
+      <DataClassMoniker Name="/linqTKSIDataContext/tPOHeader" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3314fe5e-586b-4f64-9407-49dd957c2dab" absoluteBounds="0.64000000000000012, 3.835, 1.9700000000000002, 8.9029541015625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dbf5258d-3b75-470d-b771-52bab044ef00" absoluteBounds="0.5, 0.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/linqTKSIDataContext/tPOLine" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1c4902c6-3d5b-4350-a73a-c5521e015458" absoluteBounds="0.51500000000000012, 1.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5625 : 3.375); (1.5625 : 3.03049967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/linqTKSIDataContext/tPOHeader/tPOHeader_tPOLine" />
+      <nodes>
+        <classShapeMoniker Id="e054fef2-a9d3-4cf3-8ddf-74ae44795ea6" />
+        <classShapeMoniker Id="dbf5258d-3b75-470d-b771-52bab044ef00" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="040915b4-34f4-4d30-9a5a-62a906175070" absoluteBounds="6, 5.375, 2, 5.2323225911458326">
+      <DataClassMoniker Name="/linqTKSIDataContext/tSOHeader" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7996ffc0-664f-4d99-bd2b-f8db204e9bd6" absoluteBounds="6.015, 5.835, 1.9700000000000002, 4.672322591145833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="38863462-a0bc-4188-a289-5d040ce20356" absoluteBounds="8.625, 5.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/linqTKSIDataContext/tSOLine" />
+      <nestedChildShapes>
+        <elementListCompartment Id="08e3fa44-2d69-4a99-9627-c592a8b1b30a" absoluteBounds="8.64, 5.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8 : 6.67390055338542); (8.07666666666667 : 6.67390055338542 : JumpStart); (8.24333333333333 : 6.67390055338542 : JumpEnd); (8.29166666666667 : 6.67390055338542 : JumpStart); (8.45833333333333 : 6.67390055338542 : JumpEnd); (8.625 : 6.67390055338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/linqTKSIDataContext/tSOHeader/tSOHeader_tSOLine" />
+      <nodes>
+        <classShapeMoniker Id="040915b4-34f4-4d30-9a5a-62a906175070" />
+        <classShapeMoniker Id="38863462-a0bc-4188-a289-5d040ce20356" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3bbc5291-6c6c-4264-8603-9708c27585a9" absoluteBounds="7.625, 1.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/linqTKSIDataContext/tAddress" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ffcd06ff-7468-4da4-856e-8cd345a2675e" absoluteBounds="7.6400000000000006, 1.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="494560a6-7f5a-4d53-8909-6333e978b74b" absoluteBounds="9, 1.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/linqTKSIDataContext/tVendor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fdecc521-8b86-429b-9777-6e2b1c612eeb" absoluteBounds="9.015, 2.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10 : 5.05930826822917); (10 : 5.29930826822917); (8.16 : 5.29930826822917); (8.16 : 10.7673225911458); (5.5975 : 10.7673225911458); (5.5975 : 11.8730354817708); (4.45833333333333 : 11.8730354817708 : JumpStart); (4.29166666666667 : 11.8730354817708 : JumpEnd); (2.865 : 11.8730354817708); (2.865 : 13.0779541015625); (1.625 : 13.0779541015625); (1.625 : 12.8379541015625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/linqTKSIDataContext/tVendor/tVendor_tPOHeader" />
+      <nodes>
+        <classShapeMoniker Id="494560a6-7f5a-4d53-8909-6333e978b74b" />
+        <classShapeMoniker Id="e054fef2-a9d3-4cf3-8ddf-74ae44795ea6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="90a87bc5-e205-4543-a6c4-58a237c6d25a" absoluteBounds="5.625, 0.5, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/linqTKSIDataContext/tCustomr" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fc0666fb-04c4-4906-ac62-e277471a5f74" absoluteBounds="5.6400000000000006, 0.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.0625 : 3.80930826822917); (7.0625 : 5.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/linqTKSIDataContext/tCustomr/tCustomr_tSOHeader" />
+      <nodes>
+        <classShapeMoniker Id="90a87bc5-e205-4543-a6c4-58a237c6d25a" />
+        <classShapeMoniker Id="040915b4-34f4-4d30-9a5a-62a906175070" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="46755910-7eff-44df-8adf-ee2fcc43a126" absoluteBounds="12.125, 1, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/linqTKSIDataContext/tUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="986e4169-56de-42e6-bfa8-aef6f58f3ae1" absoluteBounds="12.14, 1.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="230d2c57-5046-4273-8816-09b36ed144df" absoluteBounds="11.75, 6.5, 2, 9.2706526692708326">
+      <DataClassMoniker Name="/linqTKSIDataContext/tblCommissionStructure" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ef8797f2-c2f5-4c40-8f40-22e4956c3cff" absoluteBounds="11.765, 6.96, 1.9700000000000002, 8.7106526692708321" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cf828e60-c386-4b0b-8fb1-011d33bb9645" absoluteBounds="8.875, 9.125, 2, 3.1170068359375">
+      <DataClassMoniker Name="/linqTKSIDataContext/tEmployee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7d4441e8-d198-4da5-a46e-51450192b861" absoluteBounds="8.89, 9.585, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0ee8631c-e2f8-4585-9cc6-068b6ef0ed40" absoluteBounds="14.75, 0.5, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/linqTKSIDataContext/tblCWPackage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c574fecf-56c0-4ae6-9069-84782d83d0df" absoluteBounds="14.765, 0.96, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="90ae0ba9-abaa-4bfd-ab2c-5b4e1fc56aac" absoluteBounds="9.625, 0.5, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/linqTKSIDataContext/tblCWPackageContent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="60e55be2-1369-4558-bb23-64a1f6368e87" absoluteBounds="9.64, 0.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.75 : 0.71875); (11.625 : 0.71875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/linqTKSIDataContext/tblCWPackage/tblCWPackage_tblCWPackageContent" />
+      <nodes>
+        <classShapeMoniker Id="0ee8631c-e2f8-4585-9cc6-068b6ef0ed40" />
+        <classShapeMoniker Id="90ae0ba9-abaa-4bfd-ab2c-5b4e1fc56aac" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0f9f6c82-cf59-4b93-a00b-6282c3929e66" absoluteBounds="2.5, 0.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/linqTKSIDataContext/tblJobActivity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c87ad861-4f3f-45e7-91c2-aa95442fc282" absoluteBounds="2.5149999999999997, 0.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0459ff16-92c6-4a04-96c2-885d458dcc34" absoluteBounds="16.25, 5.25, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/linqTKSIDataContext/tblJobTax" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f77bf8da-9d27-41e8-bde5-589ea100affc" absoluteBounds="16.265, 5.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8f19a381-93e9-4f29-960a-4099a72809d3" absoluteBounds="17.25, 3.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/linqTKSIDataContext/tUserPrefrence" />
+      <nestedChildShapes>
+        <elementListCompartment Id="57e22000-22a3-487f-9026-e319f0bae8fa" absoluteBounds="17.265, 4.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4cdf7f80-bdfd-49f8-9d44-5755b8dc83ee" absoluteBounds="6.125, 11.375, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/linqTKSIDataContext/tPayment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b349a3e4-d08b-4b57-935e-0414c97717ba" absoluteBounds="6.1400000000000006, 11.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3e7efd20-3f4e-4327-ad4b-e0b4989d369d" absoluteBounds="17.75, 0.5, 2, 2.5401025390625">
+      <DataClassMoniker Name="/linqTKSIDataContext/tblTrailerHeader" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a4f4c1b0-0a12-453d-9aef-7879f11a4157" absoluteBounds="17.765, 0.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1512961b-ca8a-4645-8a46-d69cd98fe879" absoluteBounds="20.625, 0.875, 2, 3.1170068359375">
+      <DataClassMoniker Name="/linqTKSIDataContext/tblTrailerDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="237b6c19-3743-49cb-987b-287c773ff986" absoluteBounds="20.64, 1.335, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d78903ce-a711-469f-b0e9-986e366ad535" absoluteBounds="12.5, 3.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/linqTKSIDataContext/tblTasklist" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d774176-80dc-4c80-9b76-3523ccc2889d" absoluteBounds="12.515, 4.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bbb65cde-a16e-4a9d-aad9-ff078b889cf7" absoluteBounds="3.25, 12.625, 2, 6.9630354817708326">
+      <DataClassMoniker Name="/linqTKSIDataContext/tblSWOPending" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6193d06a-08b3-42fa-8c70-f30adc3c07d5" absoluteBounds="3.2650000000000006, 13.085, 1.9700000000000002, 6.403035481770833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="07fa9770-a0ee-4fa3-9db6-aaf6aa810893" absoluteBounds="6.25, 13.375, 2, 9.6552555338541648">
+      <DataClassMoniker Name="/linqTKSIDataContext/tblSWOOrder" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f3297139-90b5-405f-9897-b8d79c6d04d4" absoluteBounds="6.265, 13.835, 1.9700000000000002, 9.0952555338541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.25 : 16.4815177408854); (6.25 : 16.4815177408854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/linqTKSIDataContext/tblSWOPending/tblSWOPending_tblSWOOrder" />
+      <nodes>
+        <classShapeMoniker Id="bbb65cde-a16e-4a9d-aad9-ff078b889cf7" />
+        <classShapeMoniker Id="07fa9770-a0ee-4fa3-9db6-aaf6aa810893" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6045f3cc-cc92-42a4-bd8b-08fc19856db1" absoluteBounds="3.5, 4.75, 2, 6.9630354817708326">
+      <DataClassMoniker Name="/linqTKSIDataContext/tJob" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2a012632-7a03-4b52-8dad-f932e018fae3" absoluteBounds="3.5149999999999997, 5.21, 1.9700000000000002, 6.403035481770833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.5 : 8.23151774088542); (2.625 : 8.23151774088542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/linqTKSIDataContext/tJob/tJob_tPOHeader" />
+      <nodes>
+        <classShapeMoniker Id="6045f3cc-cc92-42a4-bd8b-08fc19856db1" />
+        <classShapeMoniker Id="e054fef2-a9d3-4cf3-8ddf-74ae44795ea6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 7.99116129557292); (6 : 7.99116129557292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/linqTKSIDataContext/tJob/tJob_tSOHeader" />
+      <nodes>
+        <classShapeMoniker Id="6045f3cc-cc92-42a4-bd8b-08fc19856db1" />
+        <classShapeMoniker Id="040915b4-34f4-4d30-9a5a-62a906175070" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 11.0711602955729); (5.51416666666667 : 11.0711602955729 : JumpStart); (5.68083333333333 : 11.0711602955729 : JumpEnd); (8.09375 : 11.0711602955729); (8.09375 : 11.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/linqTKSIDataContext/tJob/tJob_tPayment" />
+      <nodes>
+        <classShapeMoniker Id="6045f3cc-cc92-42a4-bd8b-08fc19856db1" />
+        <classShapeMoniker Id="4cdf7f80-bdfd-49f8-9d44-5755b8dc83ee" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.2812505 : 3.84780110677083); (8.2812505 : 5.21055826822917); (7.14583333333333 : 5.21055826822917 : JumpStart); (6.97916666666667 : 5.21055826822917 : JumpEnd); (5.78145583333333 : 5.21055826822917 : JumpStart); (5.61478916666667 : 5.21055826822917 : JumpEnd); (5.5 : 5.21055826822917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/linqTKSIDataContext/tAddress/tAddress_tJob" />
+      <nodes>
+        <classShapeMoniker Id="3bbc5291-6c6c-4264-8603-9708c27585a9" />
+        <classShapeMoniker Id="6045f3cc-cc92-42a4-bd8b-08fc19856db1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.79875 : 3.80930826822917); (5.79875 : 4.94902663411458); (5.78145583333333 : 4.94902663411458 : JumpStart); (5.61478916666667 : 4.94902663411458 : JumpEnd); (5.5 : 4.94902663411458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/linqTKSIDataContext/tCustomr/tCustomr_tJob" />
+      <nodes>
+        <classShapeMoniker Id="90a87bc5-e205-4543-a6c4-58a237c6d25a" />
+        <classShapeMoniker Id="6045f3cc-cc92-42a4-bd8b-08fc19856db1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.375 : 11.7130354817708); (4.375 : 12.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/linqTKSIDataContext/tJob/tJob_tblSWOPending" />
+      <nodes>
+        <classShapeMoniker Id="6045f3cc-cc92-42a4-bd8b-08fc19856db1" />
+        <classShapeMoniker Id="bbb65cde-a16e-4a9d-aad9-ff078b889cf7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="cabbf586-35f5-410b-841f-f6413b31ae0a" absoluteBounds="2.875, 2.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/linqTKSIDataContext/tblCustomerExtended" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f6cf2c14-db51-439f-b6f3-160252a54d7c" absoluteBounds="2.8899999999999997, 3.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.625 : 3.34215413411458); (4.875 : 3.34215413411458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/linqTKSIDataContext/tCustomr/tCustomr_tblCustomerExtended" />
+      <nodes>
+        <classShapeMoniker Id="90a87bc5-e205-4543-a6c4-58a237c6d25a" />
+        <classShapeMoniker Id="cabbf586-35f5-410b-841f-f6413b31ae0a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.92187325 : 3.84780110677083); (7.92187325 : 5.125); (8.19791716666667 : 5.125 : JumpStart); (8.36458383333333 : 5.125 : JumpEnd); (8.375 : 5.125); (8.375 : 11.25); (8.17708333333333 : 11.25 : JumpStart); (8.01041666666667 : 11.25 : JumpEnd); (5.875 : 11.25); (5.875 : 16.1065177408854); (5.25 : 16.1065177408854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/linqTKSIDataContext/tAddress/tAddress_tblSWOPending" />
+      <nodes>
+        <classShapeMoniker Id="3bbc5291-6c6c-4264-8603-9708c27585a9" />
+        <classShapeMoniker Id="bbb65cde-a16e-4a9d-aad9-ff078b889cf7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.6981225 : 3.80930826822917); (5.6981225 : 16.1065177408854); (5.25 : 16.1065177408854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/linqTKSIDataContext/tCustomr/tCustomr_tblSWOPending" />
+      <nodes>
+        <classShapeMoniker Id="90a87bc5-e205-4543-a6c4-58a237c6d25a" />
+        <classShapeMoniker Id="bbb65cde-a16e-4a9d-aad9-ff078b889cf7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e0604d68-5880-4cf5-b3a1-6542db496c24" absoluteBounds="9.125, 13, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/linqTKSIDataContext/tblLocationLabelJOIN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c2061002-0f52-45ff-a43b-43c381417855" absoluteBounds="9.14, 13.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="17bf39a6-ec8e-42e6-8166-d0c5a0859ee8" absoluteBounds="10, 15.375, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/linqTKSIDataContext/tblLocationBin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e27b86ba-7fa7-4091-857e-af16a8d48894" absoluteBounds="10.015, 15.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.5625 : 15.375); (10.5625 : 14.7708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/linqTKSIDataContext/tblLocationBin/tblLocationBin_tblLocationLabelJOIN" />
+      <nodes>
+        <classShapeMoniker Id="17bf39a6-ec8e-42e6-8166-d0c5a0859ee8" />
+        <classShapeMoniker Id="e0604d68-5880-4cf5-b3a1-6542db496c24" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 4.75); (4.5 : 4.5); (5.61478916666667 : 4.5 : JumpStart); (5.88208333333333 : 4.5 : JumpEnd); (6.97916666666667 : 4.5 : JumpStart); (7.14583333333333 : 4.5 : JumpEnd); (7.83853991666667 : 4.5 : JumpStart); (8.00520658333333 : 4.5 : JumpEnd); (8.19791716666667 : 4.5 : JumpStart); (8.36458383333333 : 4.5 : JumpEnd); (8.75 : 4.5); (8.75 : 5.37180826822917); (12.25 : 5.37180826822917); (12.25 : 6.13784812109375); (16.25 : 6.13784812109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/linqTKSIDataContext/tJob/tJob_tblJobTax" />
+      <nodes>
+        <classShapeMoniker Id="6045f3cc-cc92-42a4-bd8b-08fc19856db1" />
+        <classShapeMoniker Id="0459ff16-92c6-4a04-96c2-885d458dcc34" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9fa428fe-695e-48d9-8d43-c62413d7d3ca" absoluteBounds="19.875, 6.125, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/linqTKSIDataContext/tblTaxDistrict" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b9bd2dd8-b96b-412f-a203-fd2a94ff5289" absoluteBounds="19.89, 6.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(19.875 : 6.57294840494792); (18.25 : 6.57294840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/linqTKSIDataContext/tblTaxDistrict/tblTaxDistrict_tblJobTax" />
+      <nodes>
+        <classShapeMoniker Id="9fa428fe-695e-48d9-8d43-c62413d7d3ca" />
+        <classShapeMoniker Id="0459ff16-92c6-4a04-96c2-885d458dcc34" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
